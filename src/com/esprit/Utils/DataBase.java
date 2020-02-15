@@ -17,7 +17,7 @@ import java.sql.SQLException;
  */
 
     public class DataBase {
-     String url = "jdbc:mysql://localhost:3308/esprit?characterEncoding=latin1&useConfigs=maxPerformance";
+     String url = "jdbc:mysql://localhost:3306/esprit?characterEncoding=latin1&useConfigs=maxPerformance";
      String login = "root";
      String pwd = "";
     public  static DataBase db;
