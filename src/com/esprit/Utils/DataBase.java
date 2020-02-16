@@ -5,19 +5,16 @@
  */
 
 package com.esprit.Utils;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
 /**
  *
- * @author ferie
+ * @author dell
  */
-
-    public class DataBase {
-     String url = "jdbc:mysql://localhost:3306/esprit?characterEncoding=latin1&useConfigs=maxPerformance";
+public class DataBase {
+         String url = "jdbc:mysql://localhost:3307/esprit?characterEncoding=latin1&useConfigs=maxPerformance";
      String login = "root";
      String pwd = "";
     public  static DataBase db;
@@ -40,5 +37,4 @@ import java.sql.SQLException;
         db=new DataBase();
     return db;
     }     
-     
 }
