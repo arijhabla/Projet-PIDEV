@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Pc/Documents/NetBeansProjects/Projet/src/com/esprit/Utils/DataBase.java</file>
+            <file>file:/C:/Users/Pc/Documents/NetBeansProjects/Projet/src/com/esprit/test/Test.java</file>
+            <file>file:/C:/Users/Pc/Documents/NetBeansProjects/Projet/src/com/esprit/Entite/Prime.java</file>
+            <file>file:/C:/Users/Pc/Documents/NetBeansProjects/Projet/src/com/esprit/IService/IServicePrime.java</file>
+            <file>file:/C:/Users/Pc/Documents/NetBeansProjects/Projet/src/com/esprit/Service/ServicePrime.java</file>
+            <file>file:/C:/Users/Pc/Documents/NetBeansProjects/Projet/src/com/esprit/Service/ServicePaiement.java</file>
+            <file>file:/C:/Users/Pc/Documents/NetBeansProjects/Projet/src/com/esprit/IService/IServicePaiement.java</file>
+            <file>file:/C:/Users/Pc/Documents/NetBeansProjects/Projet/src/com/esprit/Entite/Paiement.java</file>
+        </group>
     </open-files>
 </project-private>

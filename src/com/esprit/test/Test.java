@@ -5,72 +5,82 @@
  */
 
 package com.esprit.test;
-import com.esprit.entite.Membre;
-import com.esprit.Service.ServiceMembre;
-import com.esprit.entite.Club;
-import com.esprit.entite.Event;
-import com.esprit.Service.ServiceClub;
-import com.esprit.Service.ServiceEvent;
-import com.esprit.Utils.Database;
+import com.esprit.Entite.Comptable;
+import com.esprit.Entite.Conge;
+import com.esprit.Entite.Paiement;
+import com.esprit.Entite.Prime;
+import com.esprit.Service.ServiceComptable;
+import com.esprit.Service.ServiceConge;
+import com.esprit.Service.ServicePaiement;
+import com.esprit.Service.ServicePrime;
+
+import com.esprit.Utils.DataBase;
 import java.sql.*;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
- * @author Khadija
+ * @author Pc
  */
 public class Test {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        ServiceClub sc=new ServiceClub();
-        ServiceEvent se=new ServiceEvent();
-        ServiceMembre sm=new ServiceMembre();
-        Club c1=new Club(45,"nounou","charity");
-        Club c2=new Club(4,"doja","mimi");
-        Club c3=new Club(25,"doja","doja");
-        Club c4=new Club(22,"hello","hello");
-        Club c5=new Club(1,"rotaract","charity");
-        Membre m1=new Membre(1,"hhh","kk",5);
-         Membre m2=new Membre(5,"kkff","kkfff",6);
-         Membre m3=new Membre(6,"feriel","ff",7);
-         
+    private static Prime Prime;
+       public static void main(String[] args) {
+        ServicePrime p=new ServicePrime();
+        ServicePaiement pa=new ServicePaiement();
+        ServiceComptable c=new ServiceComptable();
+        ServiceConge myco=new ServiceConge();
+      
+        Prime p1 = new Prime(5000,"primaire");
+        Prime p2=new Prime(700,"primaire1");
+        Prime p3=new Prime(6000,"primaire2");
+        Prime p4=new Prime(6000,"secondaire2");
+        Prime p5=new Prime(55,"primaire");
         Date d1=new Date(2020,06,12);
-        Event e1=new Event(4,"rouja",d1);
-         Event e2=new Event(55,"fifi",d1);
+        Date d2=new Date(2020,07,15);
+        Conge con1 = new Conge(222,d1,d2);
+        Paiement pa1 = new Paiement(25,4,"eeee",d1);
+        Paiement pa2=new Paiement(144444,444,"hannouna",d1);
+        Comptable c1=new Comptable(074,"Chakroun","Omar","Congés",d1,25684957,"ChakrounOmar@hotmail.com");
+        Comptable c2=new Comptable(80,"Chakroun","Omar","Congés",d1,25684957,"ChakrounOmar@hotmail.com");
+      
+        try {
+           //         
+           //Prime pr=p.recherchePrimeParGrade("primaire");
+           //System.out.println(pr);
+            //c.delete(c1);
+            //c.ajouter(c2);
+           // pa.update(pa1); 
+           //System.out.println(pa1);
+           //p.update(p2);
+           // p.delete(p1);
+           // p.delete(p2);
+           // p.delete(p3);
+           //p.delete(p4);
+           //ser.ajouter1(e2);
+           myco.ajouter(con1);
+          //p.ajouter(p2); 
+         // p.ajouter(p3); 
+        // p.ajouter(p4); 
         
-        
-                try {
-                    //sm.ajouter(m3);
-                      //sc.ajouter(c5);
-                //sm.update(m1);
-                  // sc.update(c1);
-//sm.ajouter(m1);
-                    //sc.delete(c5);
-                   //Club l=sc.rechercheClubpartype("charity");
-       // se.ajouter1(e2);
-      // sc.ajouter1(c3);
-   // se.update(e1);
-   //se.delete(e2);
-        
+            //p.delete(p1);
+  // p.delete(p2);
+ // p.delete(p3);
+ //p.delete(p4);
+// p.ajouter1(p1);/
+    
+          //  List<Prime>lt=p.readAll();
+           //List<Paiement>lst=pa.readAll();
+          //List<Prime>lst=p.Triparsalaire();
+          //System.out.println(lst);
+           System.out.println(con1);
           
-            //List<Event>lt=se.readAll();
-            List<Club> mylist = sc.readAll();
-          // List<Membre> lst =sm.Triparnom();
-               
-        System.out.println(mylist);
-        
-        } catch (SQLException ex) {
+          
+        }
+        catch (SQLException ex) 
+        {
             System.out.println(ex);
         }
     }
     
-   
-       
-    }
-    
-
+}
