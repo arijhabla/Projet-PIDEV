@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.Ajouter_calandrierController">
+  <children>
+    <Label layoutX="99.0" layoutY="51.0" text="id_examen" />
+    <Label layoutX="99.0" layoutY="123.0" text="id_matiere" />
+    <Label layoutX="99.0" layoutY="170.0" text="id_salle" />
+    <Label layoutX="99.0" layoutY="230.0" text="id_classe" />
+    <Label layoutX="99.0" layoutY="280.0" text="nom" />
+    <TextField id="id_examen" fx:id="fid_examen" layoutX="243.0" layoutY="45.0" prefWidth="200.0" />
+    <TextField id="id_matiere" fx:id="fid_matiere" layoutX="243.0" layoutY="110.0" prefWidth="200.0" />
+    <TextField id="id_salle" fx:id="fid_salle" layoutX="243.0" layoutY="160.0" prefWidth="200.0" />
+    <TextField id="id_classe" fx:id="fid_classe" layoutX="243.0" layoutY="227.0" prefWidth="200.0" />
+    <TextField id="nom" fx:id="fnom" layoutX="243.0" layoutY="270.0" prefWidth="200.0" />
+    <Button fx:id="ajouter" layoutX="452.0" layoutY="334.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
+    <Label layoutX="99.0" layoutY="324.0" text="date_examen" />
+    <TextField fx:id="fdate" layoutX="243.0" layoutY="321.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>

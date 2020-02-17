@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.AcceuilController">
+  <children>
+    <Button fx:id="bexamen" layoutX="207.0" layoutY="47.0" mnemonicParsing="false" onAction="#gestione" prefHeight="57.0" prefWidth="174.0" text="Gestion examen" />
+    <Button fx:id="bcalendrier_e" layoutX="207.0" layoutY="143.0" mnemonicParsing="false" onAction="#gestionc" prefHeight="59.0" prefWidth="184.0" text="Gestion calendrier_e" />
+    <Button fx:id="bnote" layoutX="214.0" layoutY="259.0" mnemonicParsing="false" onAction="#gestionn" prefHeight="59.0" prefWidth="184.0" text="Gestion note" />
+  </children>
+</AnchorPane>

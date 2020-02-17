@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.Afficher_noteController">
+  <children>
+    <TableView fx:id="tab" layoutX="29.0" layoutY="53.0" prefHeight="257.0" prefWidth="528.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="109.0" text="id_eleve" fx:id="tide" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="103.0" text="id_examen" fx:id="tidex" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="110.0" text="id_matiere" fx:id="tidm" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" text="note" fx:id="tnote" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" text="id_note" fx:id="tidnote" />
+      </columns>
+    </TableView>
+    <Button id="baff" fx:id="aff" layoutX="502.0" layoutY="351.0" mnemonicParsing="false" onAction="#afficher" text="afficher" />
+    <Button id="bsupp" fx:id="supp" layoutX="372.0" layoutY="351.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
+  </children>
+</AnchorPane>

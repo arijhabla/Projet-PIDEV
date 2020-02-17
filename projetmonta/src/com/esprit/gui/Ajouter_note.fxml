@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.Ajouter_noteController">
+  <children>
+    <Label layoutX="152.0" layoutY="68.0" text="id_eleve" />
+    <Label layoutX="152.0" layoutY="122.0" text="id_examen" />
+    <Label layoutX="152.0" layoutY="190.0" text="id_matiere" />
+    <Label layoutX="152.0" layoutY="254.0" text="note" />
+    <TextField fx:id="ftid_eleve" layoutX="278.0" layoutY="68.0" prefWidth="200.0" />
+    <TextField fx:id="ftidexamen" layoutX="278.0" layoutY="116.0" prefWidth="200.0" />
+    <TextField fx:id="ftidmatiere" layoutX="278.0" layoutY="177.0" prefWidth="200.0" />
+    <TextField fx:id="ft_note" layoutX="269.0" layoutY="244.0" prefWidth="200.0" />
+    <Button fx:id="bajout" layoutX="418.0" layoutY="337.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
+  </children>
+</AnchorPane>
