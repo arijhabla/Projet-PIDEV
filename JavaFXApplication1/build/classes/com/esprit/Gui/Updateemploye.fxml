@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.Gui.UpdateemployeController">
+  <children>
+    <Button id="ajouter" fx:id="modifier" layoutX="444.0" layoutY="307.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="120.0" text="modifier">
+      <font>
+        <Font name="System Bold Italic" size="14.0" />
+      </font>
+      <textFill>
+        <Color blue="0.341" green="0.200" red="0.027" fx:id="x1" />
+      </textFill>
+    </Button>
+    <Button fx:id="back" layoutX="444.0" layoutY="346.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="120.0" text="back" textFill="$x1">
+      <font>
+        <Font name="System Bold Italic" size="15.0" />
+      </font>
+    </Button>
+    <Label layoutX="85.0" layoutY="27.0" text="nom">
+      <font>
+        <Font size="20.0" fx:id="x2" />
+      </font>
+      <textFill>
+        <Color blue="1.000" green="0.000" red="0.080" fx:id="x3" />
+      </textFill>
+    </Label>
+    <Label font="$x2" layoutX="76.0" layoutY="66.0" text="prénom" textFill="$x3" />
+    <Label font="$x2" layoutX="87.0" layoutY="98.0" text="age" textFill="$x3" />
+    <Label font="$x2" layoutX="87.0" layoutY="128.0" text="role" textFill="$x3" />
+    <Label font="$x2" layoutX="78.0" layoutY="155.0" text="salaire" textFill="$x3" />
+    <Label font="$x2" layoutX="85.0" layoutY="185.0" text="prime" textFill="$x3" />
+    <Label font="$x2" layoutX="37.0" layoutY="216.0" text="nbre_heure" textFill="$x3" />
+    <TextField fx:id="nom" layoutX="152.0" layoutY="31.0" prefWidth="200.0" />
+    <TextField fx:id="prenom" layoutX="152.0" layoutY="67.0" prefWidth="200.0" />
+    <TextField fx:id="age" layoutX="152.0" layoutY="98.0" prefWidth="200.0" />
+    <TextField id="role" fx:id="role_e" layoutX="152.0" layoutY="130.0" prefWidth="200.0" />
+    <TextField id="salaire" fx:id="salaire_e" layoutX="152.0" layoutY="158.0" prefWidth="200.0" />
+    <TextField id="prime" fx:id="prime_e" layoutX="152.0" layoutY="189.0" prefWidth="200.0" />
+    <TextField id="nbr_heure" fx:id="nbre_heure" layoutX="152.0" layoutY="221.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>

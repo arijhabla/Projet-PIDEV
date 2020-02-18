@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.Gui.FXMLDocument2Controller">
+  <children>
+    <ImageView fitHeight="398.72203910531726" fitWidth="600.0" layoutX="0.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/ecole.jpg" />
+      </image>
+    </ImageView>
+    <Button id="ajouter" fx:id="ajoutercandidat" layoutX="196.0" layoutY="133.0" onAction="#handleButtonAction" opacity="0.77" prefHeight="50.0" prefWidth="208.0" text="Ajouter Candidat">
+      <font>
+        <Font name="System Bold Italic" size="17.0" fx:id="x1" />
+      </font>
+      <textFill>
+        <Color blue="0.341" green="0.200" red="0.027" fx:id="x2" />
+      </textFill>
+    </Button>
+    <Button id="afficher" fx:id="affichercandidat" font="$x1" layoutX="196.0" layoutY="221.0" mnemonicParsing="false" onAction="#afficher" opacity="0.78" prefHeight="50.0" prefWidth="208.0" text="Afficher Candidat" textFill="$x2" />
+    <ImageView fitHeight="125.0" fitWidth="166.66666666666666" layoutX="217.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/easy.png" />
+      </image>
+    </ImageView>
+    <Button fx:id="back" layoutX="415.0" layoutY="297.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="120.0" text="back" textFill="#073357">
+      <font>
+        <Font name="System Bold Italic" size="15.0" />
+      </font>
+    </Button>
+  </children>
+</AnchorPane>

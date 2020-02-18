@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #48A5EA;&#10;&#10;" styleClass=", .AnchorPane {    -fx-background-color: #1d1d1d;}" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.Gui.AccueilController">
+  <children>
+    <ImageView fitHeight="412.98077392578125" fitWidth="621.4566462808596" layoutX="0.0" layoutY="-7.0" opacity="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/ecole.jpg" />
+      </image>
+    </ImageView>
+    <Button id="b1" fx:id="GestionEmp" layoutX="202.0" layoutY="112.0" mnemonicParsing="false" onAction="#Gestionemployes" prefHeight="58.0" prefWidth="197.0" style="" styleClass="null" text="Gestion Employés" textFill="#404040" />
+    <Button fx:id="GestionCan" layoutX="201.0" layoutY="211.0" mnemonicParsing="false" onAction="#Gestioncandidats" prefHeight="58.0" prefWidth="197.00009999999747" text="Gestion Candidats" />
+    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="211.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/easy.png" />
+      </image>
+    </ImageView>
+  </children>
+  <effect>
+    <Glow level="0.36289308176100626" />
+  </effect>
+</AnchorPane>

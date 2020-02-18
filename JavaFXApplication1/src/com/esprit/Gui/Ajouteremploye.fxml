@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.Gui.AjouteremployeController">
+  <children>
+    <AnchorPane id="AnchorPane" layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #48A5EA&#10;&#10;">
+      <children>
+        <ImageView fitHeight="462.0000305175781" fitWidth="695.2211889933146" layoutX="-4.0" layoutY="-1.0" opacity="0.97" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../image/ecole.jpg" />
+          </image>
+        </ImageView>
+        <Button id="ajouter" layoutX="485.0" layoutY="307.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="25.0" prefWidth="120.0" text="ajouter">
+          <font>
+            <Font name="System Bold Italic" size="14.0" />
+          </font>
+          <textFill>
+            <Color blue="0.341" green="0.200" red="0.027" fx:id="x1" />
+          </textFill>
+        </Button>
+        <Button id="back" fx:id="back_e" layoutX="485.0" layoutY="346.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="120.0" text="back" textFill="$x1">
+          <font>
+            <Font name="System Bold Italic" size="15.0" />
+          </font>
+        </Button>
+        <Label layoutX="233.0" layoutY="92.0" text="nom">
+          <font>
+            <Font size="20.0" fx:id="x2" />
+          </font>
+          <textFill>
+            <Color blue="1.000" green="0.000" red="0.080" fx:id="x3" />
+          </textFill>
+        </Label>
+        <Label font="$x2" layoutX="212.0" layoutY="122.0" text="prénom" textFill="$x3" />
+        <Label font="$x2" layoutX="233.0" layoutY="163.0" text="age" textFill="$x3" />
+        <Label font="$x2" layoutX="236.0" layoutY="199.0" text="role" textFill="$x3" />
+        <Label font="$x2" layoutX="222.0" layoutY="225.0" text="salaire" textFill="$x3" />
+        <Label font="$x2" layoutX="222.0" layoutY="262.0" text="prime" textFill="$x3" />
+        <Label font="$x2" layoutX="174.0" layoutY="293.0" text="nbre_heure" textFill="$x3" />
+        <TextField fx:id="nom" layoutX="283.0" layoutY="97.0" prefWidth="200.0" />
+        <TextField fx:id="prenom" layoutX="285.0" layoutY="127.0" prefWidth="200.0" />
+        <TextField id="age" fx:id="age_e" layoutX="285.0" layoutY="165.0" prefWidth="200.0" />
+        <TextField id="role" fx:id="role_e" layoutX="285.0" layoutY="201.0" prefWidth="200.0" />
+        <TextField id="salaire" fx:id="salaire_e" layoutX="283.0" layoutY="231.0" prefWidth="200.0" />
+        <TextField id="prime" fx:id="prime_e" layoutX="283.0" layoutY="264.0" prefWidth="200.0" />
+        <TextField id="nbr_heure" fx:id="nbre_heure" layoutX="283.0" layoutY="298.0" prefWidth="200.0" />
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="274.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../image/easy.png" />
+          </image>
+        </ImageView>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
