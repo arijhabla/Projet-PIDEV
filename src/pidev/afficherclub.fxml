@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pidev.AfficherclubController">
+  <children>
+    <TableView fx:id="table" layoutX="200.0" layoutY="123.0" prefHeight="200.0" prefWidth="226.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="id_club" fx:id="id" />
+        <TableColumn prefWidth="75.0" text="nom_club" fx:id="nom" />
+        <TableColumn prefWidth="75.0" text="type_club" fx:id="type" />
+      </columns>
+    </TableView>
+    <Button fx:id="supprimer" layoutX="519.0" layoutY="343.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
+    <Button fx:id="back" layoutX="40.0" layoutY="344.0" mnemonicParsing="false" onAction="#back" text="Back" />
+    <Button fx:id="afficher" layoutX="346.0" layoutY="343.0" mnemonicParsing="false" onAction="#afficher" text="afficher" />
+    <Button fx:id="modifier" layoutX="444.0" layoutY="350.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+    <TextField fx:id="filterField" layoutX="46.0" layoutY="39.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>

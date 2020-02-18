@@ -14,10 +14,13 @@ import com.esprit.Utils.Database;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.ObservableList;
 
  //* @author Khadija
 
     public class ServiceClub implements IServiceClub<Club> {
+            private static ServiceClub instance;
+
 
     private Connection con;
     private Statement ste;
@@ -26,6 +29,7 @@ import java.util.logging.Logger;
         con = Database.getInstance().getConnection();
 
     }
+    
 
     @Override
     public void ajouter(Club t) throws SQLException {
@@ -61,7 +65,7 @@ import java.util.logging.Logger;
 
     }
     public void update(Club t) throws SQLException {
-          String sql ="UPDATE `esprit`.`Club` SET `id_club`='"+t.getId_club() + "',`nom_club`='"+t.getNom_club() + "' ,`type_club`='"+t.getType_club() + "'  WHERE `id_club`='"+t.getId_club()+"' ";
+          String sql ="UPDATE `esprit`.`Club` SET `nom_club`='"+t.getNom_club() + "' ,`type_club`='"+t.getType_club() + "'  WHERE `nom_club`='"+t.getNom_club()+"' ";
   
     try {
             Statement stl = con.createStatement();
@@ -115,6 +119,17 @@ import java.util.logging.Logger;
         } 
     return null;
  }
+
+
+    public static ServiceClub getInstance(){
+        if(instance==null) 
+            instance=new ServiceClub();
+        return instance;
+    }
+
+    public ObservableList<Club> displayAll() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
     

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pidev.UpdateeleveController">
+  <children>
+    <Label layoutX="70.0" layoutY="146.0" text="Nom" />
+    <Label layoutX="68.0" layoutY="188.0" text="Type" />
+    <TextField fx:id="nom" layoutX="255.0" layoutY="154.0" prefWidth="200.0" />
+    <TextField fx:id="type" layoutX="252.0" layoutY="206.0" prefWidth="200.0" />
+    <Button fx:id="modifier" layoutX="467.0" layoutY="286.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+    <Label layoutX="80.0" layoutY="96.0" text="id" />
+    <TextField fx:id="id" layoutX="249.0" layoutY="93.0" prefWidth="200.0" />
+    <Button fx:id="back" layoutX="327.0" layoutY="287.0" mnemonicParsing="false" onAction="#back" text="back" />
+  </children>
+</AnchorPane>
