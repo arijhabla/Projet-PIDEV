@@ -5,6 +5,8 @@
  */
 
 package com.esprit.IService;
+
+import com.esprit.Entite.Comptable;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -12,9 +14,11 @@ import java.util.List;
  *
  * @author Pc
  */
-public interface IServiceComptable<T> {
+public interface IServiceComptable<T>  {
     void ajouter(T t) throws SQLException;
     void delete(T t) throws SQLException;
     void update(T t) throws SQLException;
+    Comptable getcomp (int ID) throws SQLException;
     List<T> readAll() throws SQLException;
 }
+

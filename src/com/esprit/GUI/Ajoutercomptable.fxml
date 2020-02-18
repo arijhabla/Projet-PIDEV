@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.GUI.AjoutercomptableController">
+  <children>
+    <Label layoutX="217.0" layoutY="41.0" prefHeight="43.0" prefWidth="208.0" text="COMPTABLE" textFill="RED">
+      <font>
+        <Font size="22.0" />
+      </font>
+    </Label>
+    <Label layoutX="104.0" layoutY="116.0" prefHeight="24.0" prefWidth="127.0" text="Nom comptable" />
+    <Label layoutX="104.0" layoutY="151.0" prefHeight="24.0" prefWidth="127.0" text="Prenom comptable" />
+    <Label layoutX="104.0" layoutY="182.0" prefHeight="24.0" prefWidth="127.0" text="Etat comptable" />
+    <Label layoutX="104.0" layoutY="213.0" prefHeight="24.0" prefWidth="127.0" text="Telephone comptable" />
+    <Label layoutX="104.0" layoutY="243.0" prefHeight="24.0" prefWidth="127.0" text="Adresse comptable" />
+    <TextField fx:id="nomc" layoutX="247.0" layoutY="118.0" prefWidth="200.0" />
+    <TextField fx:id="prenomc" layoutX="248.0" layoutY="152.0" prefWidth="200.0" />
+    <TextField fx:id="etatc" layoutX="248.0" layoutY="184.0" prefWidth="200.0" />
+    <TextField fx:id="telc" layoutX="248.0" layoutY="212.0" prefWidth="200.0" />
+    <TextField fx:id="adressec" layoutX="248.0" layoutY="244.0" prefWidth="200.0" />
+    <Button fx:id="ajouter" layoutX="390.0" layoutY="290.0" mnemonicParsing="false" onAction="#ajouter" text="Valider" />
+  </children>
+</AnchorPane>

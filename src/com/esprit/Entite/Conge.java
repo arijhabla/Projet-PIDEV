@@ -1,63 +1,58 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package com.esprit.Entite;
 
 import java.sql.Date;
 
 /**
  *
- * @author Pc
+ * @author ferie
  */
 public class Conge {
+    private int id_Conge;
+ 
+    private Date Date_Debut_Conge;
+    private Date Date_Fin_Conge;
+
+    public int getId_conge() {
+        return id_Conge;
+    }
+
     
-    int id_enseignant;
-    Date date_debut;
-    Date date_fin;
-    
-    public Conge() {
-    }
-    
-    
-    public Conge(int id_enseignant, Date date_debut, Date date_fin) {
-        this.id_enseignant = id_enseignant;
-        this.date_debut = date_debut;
-        this.date_fin = date_fin;
+
+    public Date getDate_Debut_Conge() {
+        return Date_Debut_Conge;
     }
 
-    public int getId_enseignant() {
-        return id_enseignant;
+    public Date getDate_Fin_Conge() {
+        return Date_Fin_Conge;
     }
 
-    public void setId_enseignant(int id_enseignant) {
-        this.id_enseignant = id_enseignant;
+    public void setId_conge(int id_Conge) {
+        this.id_Conge = id_Conge;
     }
 
-    public Date getDate_debut() {
-        return date_debut;
+   
+
+    public void setDate_Debut_Conge(Date Date_Debut_Conge) {
+        this.Date_Debut_Conge = Date_Debut_Conge;
     }
 
-    public void setDate_debut(Date date_debut) {
-        this.date_debut = date_debut;
+    public void setDate_Fin_Conge(Date Date_Fin_Conge) {
+        this.Date_Fin_Conge = Date_Fin_Conge;
     }
 
-    public Date getDate_fin() {
-        return date_fin;
-    }
-
-    public void setDate_fin(Date date_fin) {
-        this.date_fin = date_fin;
+    public Conge(int id_Conge, Date Date_Debut_Conge, Date Date_Fin_Conge) {
+        this.id_Conge = id_Conge;
+     
+        this.Date_Debut_Conge = Date_Debut_Conge;
+        this.Date_Fin_Conge = Date_Fin_Conge;
     }
 
     @Override
     public String toString() {
-        return "Conge{" + "id_enseignant=" + id_enseignant + ", date_debut=" + date_debut + ", date_fin=" + date_fin + '}';
+        return "Conge{" + "id_conge=" + id_Conge + ", Date_Debut_Conge=" + Date_Debut_Conge + ", Date_Fin_Conge=" + Date_Fin_Conge + '}';
     }
 
+ 
     
     
-   
 }
