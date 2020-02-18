@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.AcceuilController">
+  <children>
+    <Button fx:id="bclasse" layoutX="229.0" layoutY="55.0" mnemonicParsing="false" onAction="#gotoclasse" prefWidth="139.0" text="classe" />
+    <Button id="bemploi_du_temps" fx:id="bemp" layoutX="229.0" layoutY="130.0" mnemonicParsing="false" onAction="#gotoemp" text="emploi du temps" />
+    <Button fx:id="bmatiere" layoutX="229.0" layoutY="211.0" mnemonicParsing="false" onAction="#gotomat" prefWidth="139.0" text="matière" />
+    <Button fx:id="bsalle" layoutX="229.0" layoutY="289.0" mnemonicParsing="false" onAction="#gotosalle" prefWidth="139.0" text="salle" />
+  </children>
+</AnchorPane>

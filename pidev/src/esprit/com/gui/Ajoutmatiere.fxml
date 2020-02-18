@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.AjoutmatiereController">
+  <children>
+    <Label layoutX="123.0" layoutY="101.0" text="nom_matière" />
+    <Label layoutX="123.0" layoutY="180.0" prefWidth="87.0" text="nbr_heures" />
+    <TextField fx:id="tfnom_matiere" layoutX="265.0" layoutY="95.0" prefWidth="200.0" />
+    <TextField id="tfnb_heures" fx:id="tfnbr_heures" layoutX="268.0" layoutY="170.0" prefWidth="200.0" />
+    <Button id="bvalider" fx:id="bvaliderm" layoutX="229.0" layoutY="253.0" mnemonicParsing="false" onAction="#ajouter_matiere" text="valider" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.ModifierclasseController">
+  <children>
+    <TextField fx:id="tfnb" layoutX="300.0" layoutY="116.0" prefWidth="200.0" />
+    <Label layoutX="84.0" layoutY="126.0" text="nbr_élèves" />
+    <Button fx:id="modifier" layoutX="229.0" layoutY="200.0" mnemonicParsing="false" onAction="#modifier" text="MODIFIER" />
+    <Label layoutX="85.0" layoutY="70.0" text="id_classe" />
+    <TextField fx:id="id" layoutX="300.0" layoutY="70.0" onAction="#id" prefWidth="200.0" />
+  </children>
+</AnchorPane>

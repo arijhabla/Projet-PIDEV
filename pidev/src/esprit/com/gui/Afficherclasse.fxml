@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.AfficherclasseController">
+  <children>
+    <TableView fx:id="table" layoutX="112.0" layoutY="74.0" prefHeight="252.0" prefWidth="206.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="id_classse" fx:id="tfid" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="129.0" text="nbr_eleves" fx:id="tff" />
+      </columns>
+    </TableView>
+    <Button fx:id="afficher" layoutX="464.0" layoutY="341.0" mnemonicParsing="false" onAction="#afficher" text="afficher" />
+    <Button fx:id="supprimer" layoutX="346.0" layoutY="342.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
+    <Button fx:id="modifier" layoutX="236.0" layoutY="342.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+  </children>
+</AnchorPane>

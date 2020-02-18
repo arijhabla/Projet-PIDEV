@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.AjoutemploiController">
+  <children>
+    <Button id="bvalider" fx:id="ajouter_emp" layoutX="248.0" layoutY="245.0" mnemonicParsing="false" onAction="#ajouter_emp" text="valider" />
+    <Label layoutX="151.0" layoutY="156.0" text="nom_emploi" />
+    <TextField fx:id="tfnom_emp" layoutX="248.0" layoutY="146.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>
