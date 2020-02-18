@@ -42,6 +42,7 @@ public class homepage extends Application {
             System.out.println(ex.getMessage());
         }
     }
+    
 
     /**
      * @param args the command line arguments

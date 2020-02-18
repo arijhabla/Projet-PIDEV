@@ -9,13 +9,13 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.AcceuilController">
   <children>
-    <ImageView id="retour-notion-ecole-fond-bois-blanc_106006-695" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
       <image>
-        <Image url="@../../../../../retour-notion-ecole-fond-bois-blanc_106006-695.jpg" preserveRatio="true" smooth="true" />
+        <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" preserveRatio="true" smooth="true" />
       </image>
     </ImageView>
-    <Button fx:id="bexamen" layoutX="207.0" layoutY="47.0" mnemonicParsing="false" onAction="#gestione" prefHeight="57.0" prefWidth="174.0" text="Gestion examen" />
-    <Button fx:id="bcalendrier_e" layoutX="207.0" layoutY="143.0" mnemonicParsing="false" onAction="#gestionc" prefHeight="59.0" prefWidth="184.0" text="Gestion calendrier_e" />
-    <Button fx:id="bnote" layoutX="214.0" layoutY="259.0" mnemonicParsing="false" onAction="#gestionn" prefHeight="59.0" prefWidth="184.0" text="Gestion note" />
+    <Button fx:id="bexamen" layoutX="180.0" layoutY="70.0" mnemonicParsing="false" onAction="#gestione" prefHeight="60.0" prefWidth="222.0" style="-fx-background-color: &#10;        #ecebe9,&#10;        rgba(0,0,0,0.05),&#10;        linear-gradient(#dcca8a, #c7a740),&#10;        linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e6c75d 80%, #e2c045 100%),&#10;        linear-gradient(#f6ebbe, #e6c34d);&#10;    -fx-background-insets: 0,9 9 8 9,9,10,11;&#10;    -fx-background-radius: 50;&#10;    -fx-padding: 15 30 15 30;&#10;    -fx-font-family: &quot;Helvetica&quot;;&#10;    -fx-font-size: 18px;&#10;    -fx-text-fill: #311c09;&#10;    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);" text="Gestion examen" />
+    <Button fx:id="bcalendrier_e" layoutX="180.0" layoutY="163.0" mnemonicParsing="false" onAction="#gestionc" prefHeight="59.0" prefWidth="222.0" style="-fx-background-color: &#10;        #ecebe9,&#10;        rgba(0,0,0,0.05),&#10;        linear-gradient(#dcca8a, #c7a740),&#10;        linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e6c75d 80%, #e2c045 100%),&#10;        linear-gradient(#f6ebbe, #e6c34d);&#10;    -fx-background-insets: 0,9 9 8 9,9,10,11;&#10;    -fx-background-radius: 50;&#10;    -fx-padding: 15 30 15 30;&#10;    -fx-font-family: &quot;Helvetica&quot;;&#10;    -fx-font-size: 18px;&#10;    -fx-text-fill: #311c09;&#10;    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);" text="Gestion calendrier_e" />
+    <Button fx:id="bnote" layoutX="184.0" layoutY="252.0" mnemonicParsing="false" onAction="#gestionn" prefHeight="59.0" prefWidth="214.0" style="-fx-background-color: &#10;        #ecebe9,&#10;        rgba(0,0,0,0.05),&#10;        linear-gradient(#dcca8a, #c7a740),&#10;        linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e6c75d 80%, #e2c045 100%),&#10;        linear-gradient(#f6ebbe, #e6c34d);&#10;    -fx-background-insets: 0,9 9 8 9,9,10,11;&#10;    -fx-background-radius: 50;&#10;    -fx-padding: 15 30 15 30;&#10;    -fx-font-family: &quot;Helvetica&quot;;&#10;    -fx-font-size: 18px;&#10;    -fx-text-fill: #311c09;&#10;    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);" text="Gestion note" />
   </children>
 </AnchorPane>

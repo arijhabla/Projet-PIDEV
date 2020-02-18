@@ -6,25 +6,30 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.Modifier_noteController">
   <children>
-    <ImageView id="retour-notion-ecole-fond-bois-blanc_106006-695" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
       <image>
-        <Image url="@../../../../retour-notion-ecole-fond-bois-blanc_106006-695.jpg" preserveRatio="true" smooth="true" />
+        <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" preserveRatio="true" smooth="true" />
       </image>
     </ImageView>
-    <Label layoutX="87.0" layoutY="99.0" text="id_eleve" />
-    <Label layoutX="87.0" layoutY="171.0" text="id_examen" />
-    <Label layoutX="87.0" layoutY="230.0" text="id_matiere" />
-    <Label layoutX="87.0" layoutY="283.0" text="note" />
+    <Label layoutX="87.0" layoutY="99.0" text="id_eleve" textFill="WHITE" />
+    <Label layoutX="87.0" layoutY="171.0" text="id_examen" textFill="WHITE" />
+    <Label layoutX="87.0" layoutY="230.0" text="id_matiere" textFill="WHITE" />
+    <Label layoutX="87.0" layoutY="283.0" text="note" textFill="WHITE" />
     <TextField fx:id="idel" layoutX="277.0" layoutY="93.0" prefWidth="200.0" />
     <TextField fx:id="idexa" layoutX="277.0" layoutY="161.0" prefWidth="200.0" />
     <TextField fx:id="idmat" layoutX="277.0" layoutY="224.0" prefWidth="200.0" />
     <TextField id="note" fx:id="notee" layoutX="277.0" layoutY="277.0" prefWidth="200.0" />
-    <Button id="modifier" fx:id="modifiern" layoutX="405.0" layoutY="325.0" mnemonicParsing="false" onAction="#modifiern" text="modifier" />
-    <Button fx:id="annulern" layoutX="501.0" layoutY="326.0" mnemonicParsing="false" onAction="#annulern" text="annuler" />
+    <Button id="modifier" fx:id="modifiern" layoutX="398.0" layoutY="323.0" mnemonicParsing="false" onAction="#modifiern" prefHeight="44.0" prefWidth="89.0" style=" -fx-background-color:&#10;        linear-gradient(#f0ff35, #a9ff00),&#10;        radial-gradient(center 50% -40%, radius 200%, #b8ee36 45%, #80c800 50%);&#10;    -fx-background-radius: 6, 5;&#10;    -fx-background-insets: 0, 1;&#10;    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );&#10;    -fx-text-fill: #395306;" text="modifier">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Button>
+    <Button fx:id="annulern" layoutX="501.0" layoutY="326.0" mnemonicParsing="false" onAction="#annulern" prefHeight="44.0" prefWidth="82.0" style=" -fx-padding: 8 15 15 15;&#10;    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;&#10;    -fx-background-radius: 8;&#10;    -fx-background-color: &#10;        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),&#10;        #9d4024,&#10;        #d86e3a,&#10;        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);&#10;    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );&#10;    -fx-font-weight: bold;&#10;    -fx-font-size: 14;" text="annuler" />
     <TextField fx:id="idnm" layoutX="277.0" layoutY="38.0" prefWidth="200.0" />
-    <Label layoutX="97.0" layoutY="41.0" text="id_note" />
+    <Label layoutX="97.0" layoutY="41.0" text="id_note" textFill="WHITE" />
   </children>
 </AnchorPane>

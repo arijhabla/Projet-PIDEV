@@ -42,6 +42,7 @@ public class McalandrierController implements Initializable {
     @FXML
     private void ajouter(ActionEvent event) {
               try {
+                  
             
             Parent root = FXMLLoader.load(getClass().getResource("Ajouter_calandrier.fxml"));
            Scene scene = new Scene(root);
@@ -68,6 +69,7 @@ public class McalandrierController implements Initializable {
             
             stage.setScene(scene);
             stage.show();
+            
     
         } catch (IOException ex) {
             
@@ -92,4 +94,6 @@ public class McalandrierController implements Initializable {
             System.out.println(ex.getMessage());
         }
     }
+    
 }
+

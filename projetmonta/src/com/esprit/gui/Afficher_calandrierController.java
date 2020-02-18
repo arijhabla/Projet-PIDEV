@@ -16,6 +16,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,6 +27,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -65,6 +68,8 @@ public static String nom_e;
 public static String date_e;
     @FXML
     private Button annuler;
+    @FXML
+    private TextField filterField;
 
     /**
      * Initializes the controller class.
@@ -90,6 +95,40 @@ public static String date_e;
         } catch (SQLException ex) {
             Logger.getLogger(Afficher_calandrierController.class.getName()).log(Level.SEVERE, null, ex);
         }
+         
+        FilteredList<Calandrier_e> filteredData = new FilteredList<>(data, b -> true);
+          filterField.textProperty().addListener((observable, oldValue, newValue) -> {
+			filteredData.setPredicate(emp -> {
+				// If filter text is empty, display all persons.
+								
+				if (newValue == null || newValue.isEmpty()) {
+					return true;
+				}
+				
+				// Compare first name and last name of every person with filter text.
+				String lowerCaseFilter = newValue.toLowerCase();
+				
+				if (emp.getNom().toLowerCase().indexOf(lowerCaseFilter) != -1 ) {
+					return true; // Filter matches first name.
+				} else if (emp.getDate_ex().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+					return true; // Filter matches last name.
+				}
+				else if (String.valueOf(emp.getId_classe()).indexOf(lowerCaseFilter)!=-1)
+				     return true;
+				     else  
+				    	 return false; // Does not match.
+			});
+		});
+		
+		// 3. Wrap the FilteredList in a SortedList. 
+		SortedList<Calandrier_e> sortedData = new SortedList<>(filteredData);
+		
+		// 4. Bind the SortedList comparator to the TableView comparator.
+		// 	  Otherwise, sorting the TableView would have no effect.
+		sortedData.comparatorProperty().bind(table.comparatorProperty());
+		
+		// 5. Add sorted (and filtered) data to the table.
+table.setItems(sortedData);
         // TODO
     } 
 

@@ -71,7 +71,7 @@ public class ServiceNote implements IServiceNote<Note> {
 
     }
     public void update(Note t) throws SQLException {
-          String sql ="UPDATE `esprit`.`note` SET `id_eleve`='"+t.getId_eleve() + "',`id_examen`='"+t.getId_examen() + "' ,`id_matiere`='"+t.getId_matiere() + "',`note`='"+t.getNote() + "' ,`id_note`='"+t.getId_note() + "'WHERE `id_eleve`='"+t.getId_eleve()+"' ";
+          String sql ="UPDATE `esprit`.`note` SET `id_eleve`='"+t.getId_eleve() + "',`id_examen`='"+t.getId_examen() + "' ,`id_matiere`='"+t.getId_matiere() + "',`note`='"+t.getNote() + "' ,`id_note`='"+t.getId_note() + "'WHERE `id_note`='"+t.getId_note()+"' ";
   
     try {
             Statement stl = con.createStatement();

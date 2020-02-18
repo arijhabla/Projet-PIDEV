@@ -16,6 +16,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,6 +27,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -52,6 +55,7 @@ public class Affichier_examenController implements Initializable {
     private Button modifierex;
     @FXML
     private Button annuler;
+    @FXML
 
 
     /**
@@ -75,6 +79,7 @@ public class Affichier_examenController implements Initializable {
             Logger.getLogger(Affichier_examenController.class.getName()).log(Level.SEVERE, null, ex);
         }
         // TODO
+           
     }    
  public void setTab(TableView<Examen> table) {
         this.table = table;

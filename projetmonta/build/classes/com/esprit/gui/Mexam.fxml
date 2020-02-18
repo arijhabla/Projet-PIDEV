@@ -9,13 +9,13 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.MexamController">
   <children>
-    <ImageView id="retour-notion-ecole-fond-bois-blanc_106006-695" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
       <image>
-        <Image url="@../../../../retour-notion-ecole-fond-bois-blanc_106006-695.jpg" preserveRatio="true" smooth="true" />
+        <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" preserveRatio="true" smooth="true" />
       </image>
     </ImageView>
-    <Button id="ajouter" fx:id="bajout" layoutX="229.0" layoutY="82.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="64.0" prefWidth="150.0" text="ajouter_examen" />
-    <Button fx:id="baff" layoutX="229.0" layoutY="194.0" mnemonicParsing="false" onAction="#afficher" prefHeight="64.0" prefWidth="150.0" text="afficher_examen" />
-    <Button fx:id="exit" layoutX="451.0" layoutY="343.0" mnemonicParsing="false" onAction="#exit" prefHeight="43.0" prefWidth="95.0" text="exit" />
+    <Button id="ajouter" fx:id="bajout" layoutX="224.0" layoutY="96.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="64.0" prefWidth="150.0" style="-fx-background-color: &#10;        linear-gradient(#ffd65b, #e68400),&#10;        linear-gradient(#ffef84, #f2ba44),&#10;        linear-gradient(#ffea6a, #efaa22),&#10;        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),&#10;        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0,1,2,3,0;&#10;    -fx-text-fill: #654b00;&#10;    -fx-font-weight: bold;&#10;    -fx-font-size: 14px;&#10;    -fx-padding: 10 20 10 20;" text="ajouter_examen" />
+    <Button fx:id="baff" layoutX="224.0" layoutY="208.0" mnemonicParsing="false" onAction="#afficher" prefHeight="64.0" prefWidth="150.0" style="-fx-background-color: &#10;        linear-gradient(#ffd65b, #e68400),&#10;        linear-gradient(#ffef84, #f2ba44),&#10;        linear-gradient(#ffea6a, #efaa22),&#10;        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),&#10;        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0,1,2,3,0;&#10;    -fx-text-fill: #654b00;&#10;    -fx-font-weight: bold;&#10;    -fx-font-size: 14px;&#10;    -fx-padding: 10 20 10 20;" text="afficher_examen" />
+    <Button fx:id="exit" layoutX="451.0" layoutY="343.0" mnemonicParsing="false" onAction="#exit" prefHeight="43.0" prefWidth="95.0" style="-fx-background-color: linear-gradient(#ff5400, #be1d00);&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0;&#10;    -fx-text-fill: white;" text="exit" />
   </children>
 </AnchorPane>
