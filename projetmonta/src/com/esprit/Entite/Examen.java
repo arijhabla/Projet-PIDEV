@@ -75,6 +75,9 @@ public class Examen {
         return "Examen{" + "id_examen=" + id_examen + ", id_matiere=" + id_matiere + ", date_examen=" + date_examen + ", coefficient=" + coefficient + '}';
     }
 
+    public Examen() {
+    }
+
    
 
     

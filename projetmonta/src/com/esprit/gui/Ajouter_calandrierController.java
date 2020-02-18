@@ -8,12 +8,6 @@ package com.esprit.gui;
 
 import com.esprit.Entite.Calandrier_e;
 import com.esprit.Service.ServiceCalandrier_e;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -21,8 +15,14 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -44,6 +44,8 @@ public class Ajouter_calandrierController implements Initializable {
     private TextField fdate;
       @FXML
     private Button ajouter;
+    @FXML
+    private Button annuler;
     /**
      * Initializes the controller class.
      */
@@ -75,6 +77,23 @@ public class Ajouter_calandrierController implements Initializable {
             ce.ajouter(c);
         } catch (SQLException ex) {
             Logger.getLogger(Ajouter_calandrierController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @FXML
+    private void annuler(ActionEvent event) {
+              try {
+            
+            Parent root = FXMLLoader.load(getClass().getResource("Mcalandrier.fxml"));
+           Scene scene = new Scene(root);
+            Stage stage = (Stage) annuler.getScene().getWindow();
+            stage.close();
+            
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException ex) {
+            
+            System.out.println(ex.getMessage());
         }
     }
     

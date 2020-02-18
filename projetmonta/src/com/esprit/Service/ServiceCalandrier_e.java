@@ -20,6 +20,13 @@ import java.util.logging.Logger;
  * @author BEN SAID
  */
 public class ServiceCalandrier_e implements IServiceCalandrier_e<Calandrier_e> {
+      private static ServiceCalandrier_e instance;
+    public static ServiceCalandrier_e getInstance() {
+   if(instance==null) 
+            instance=new ServiceCalandrier_e();
+        return instance;    }
+
+  
 
     private Connection con;
     private Statement ste;

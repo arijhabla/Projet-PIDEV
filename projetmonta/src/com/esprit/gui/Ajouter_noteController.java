@@ -8,12 +8,6 @@ package com.esprit.gui;
 
 import com.esprit.Entite.Note;
 import com.esprit.Service.ServiceNote;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -21,8 +15,14 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 
 /**
@@ -42,6 +42,8 @@ public class Ajouter_noteController implements Initializable {
     
     @FXML
     private Button bajout;
+    @FXML
+    private Button annuler;
 
     /**
      * Initializes the controller class.
@@ -73,6 +75,23 @@ public class Ajouter_noteController implements Initializable {
     }
     
         // TODO
+
+    @FXML
+    private void annuler(ActionEvent event) {
+              try {
+            
+            Parent root = FXMLLoader.load(getClass().getResource("Mnote.fxml"));
+           Scene scene = new Scene(root);
+            Stage stage = (Stage) annuler.getScene().getWindow();
+            stage.close();
+            
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException ex) {
+            
+            System.out.println(ex.getMessage());
+        }
+    }
     }    
     
 

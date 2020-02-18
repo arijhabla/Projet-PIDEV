@@ -16,9 +16,8 @@ public class Calandrier_e {
     int id_matiere;
     int id_salle;
     int id_classe;
-  
     String nom;
-  String date_ex;
+    String date_ex;
     
   public int getId_calandrier() {
         return id_calandrier;

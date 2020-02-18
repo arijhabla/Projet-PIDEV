@@ -9,10 +9,9 @@ import com.esprit.Entite.Examen;
 import com.esprit.Service.ServiceExamen;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,56 +27,56 @@ import javafx.stage.Stage;
  *
  * @author BEN SAID
  */
-public class Ajouter_examenController implements Initializable {
+public class Modifier_examenController implements Initializable {
     @FXML
-    private TextField tfdate_examen;
-     @FXML
-    private TextField tfid_matiere;
+    private TextField idmm;
     @FXML
-    private TextField tf_coefficient;
+    private TextField dateexm;
     @FXML
-    private Button bvalider;
+    private TextField coeffm;
     @FXML
-    private Button annuler;
+    private Button modifier;
+    @FXML
+    private Button annulere;
+    @FXML
+    private TextField idexm;
 
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        
         // TODO
-    }
+    }    
 
     @FXML
-    private void ajouter(ActionEvent event) {
-        try {
-                int id_matiere=Integer.parseInt(tfid_matiere.getText());
-                String date_examen=tfdate_examen.getText();
-                float coefficient=Float.parseFloat(tf_coefficient.getText());
-            
+    private void modifier(ActionEvent event) throws SQLException {
+       
+       
+        int id_examen=Integer.parseInt(idexm.getText());
+         int id_matiere=Integer.parseInt(idmm.getText());
+        String date_examen=dateexm.getText();
+        float coefficient=Float.parseFloat(coeffm.getText());
+      
+        Examen ex = new Examen(id_examen,id_matiere,date_examen,coefficient);
+        ServiceExamen e =ServiceExamen.getInstance();
 
-            
-            
-            
-            System.out.println(id_matiere);
-            Examen e= new Examen(id_matiere,date_examen,coefficient);
-            ServiceExamen se= new ServiceExamen(); 
-            se.ajouter1(e);
-        } catch (SQLException ex) {
-            Logger.getLogger(Ajouter_examenController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+
+e.update(ex);
     }
+ 
+    
+   
+
 
     @FXML
-    private void annuler(ActionEvent event) {
+    private void annulere(ActionEvent event) {
               try {
             
-            Parent root = FXMLLoader.load(getClass().getResource("Mexam.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Affichier_examen.fxml"));
            Scene scene = new Scene(root);
-            Stage stage = (Stage) annuler.getScene().getWindow();
+            Stage stage = (Stage) annulere.getScene().getWindow();
             stage.close();
             
             stage.setScene(scene);
@@ -87,6 +86,5 @@ public class Ajouter_examenController implements Initializable {
             System.out.println(ex.getMessage());
         }
     }
-    
     
 }

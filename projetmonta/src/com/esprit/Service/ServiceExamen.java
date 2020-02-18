@@ -19,6 +19,12 @@ import java.util.logging.Logger;
  * @author BEN SAID
  */
 public class ServiceExamen implements IServiceExamen<Examen> {
+    
+    private static ServiceExamen instance;
+    public static ServiceExamen getInstance() {
+   if(instance==null) 
+            instance=new ServiceExamen();
+        return instance;    }
 
     private Connection con;
     private Statement ste;

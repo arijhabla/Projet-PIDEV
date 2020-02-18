@@ -4,16 +4,23 @@
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.Ajouter_examenController">
   <children>
+    <ImageView id="retour-notion-ecole-fond-bois-blanc_106006-695" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+      <image>
+        <Image url="@../../../../retour-notion-ecole-fond-bois-blanc_106006-695.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
     <Label layoutX="109.0" layoutY="93.0" text="id_matiere" />
     <Label layoutX="109.0" layoutY="152.0" text="date_examen" />
     <Label layoutX="109.0" layoutY="233.0" text="coefficient" />
     <TextField fx:id="tfid_matiere" layoutX="270.0" layoutY="90.0" prefWidth="200.0" />
     <TextField fx:id="tfdate_examen" layoutX="270.0" layoutY="149.0" prefWidth="200.0" />
     <TextField fx:id="tf_coefficient" layoutX="270.0" layoutY="223.0" prefWidth="200.0" />
-    <Button fx:id="bvalider" layoutX="295.0" layoutY="327.0" mnemonicParsing="false" onAction="#ajouter" text="valider" />
+    <Button fx:id="bvalider" layoutX="357.0" layoutY="341.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="38.0" prefWidth="88.0" text="valider" />
+    <Button fx:id="annuler" layoutX="489.0" layoutY="341.0" mnemonicParsing="false" onAction="#annuler" prefHeight="38.0" prefWidth="88.0" text="annuler" />
   </children>
 </AnchorPane>

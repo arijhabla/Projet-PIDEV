@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.Modifier_calandrierController">
+  <children>
+    <ImageView id="retour-notion-ecole-fond-bois-blanc_106006-695" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+      <image>
+        <Image url="@../../../../retour-notion-ecole-fond-bois-blanc_106006-695.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Label layoutX="108.0" layoutY="97.0" text="id_matiere" />
+    <Label layoutX="112.0" layoutY="152.0" text="id_salle" />
+    <Label layoutX="112.0" layoutY="201.0" text="id_classe" />
+    <Label layoutX="112.0" layoutY="264.0" text="nom" />
+    <Label layoutX="112.0" layoutY="316.0" text="date_examen" />
+    <Label layoutX="107.0" layoutY="55.0" text="id_examen" />
+    <TextField fx:id="idem" layoutX="249.0" layoutY="49.0" prefWidth="200.0" />
+    <TextField fx:id="idmm" layoutX="249.0" layoutY="101.0" prefWidth="200.0" />
+    <TextField fx:id="idsm" layoutX="249.0" layoutY="146.0" prefWidth="200.0" />
+    <TextField fx:id="idcm" layoutX="249.0" layoutY="201.0" prefWidth="200.0" />
+    <TextField fx:id="nomm" layoutX="249.0" layoutY="258.0" prefWidth="200.0" />
+    <TextField fx:id="datecm" layoutX="249.0" layoutY="316.0" prefWidth="200.0" />
+    <Button id="modifier" fx:id="modifierc" layoutX="370.0" layoutY="357.0" mnemonicParsing="false" onAction="#modifierc" text="modifier" />
+    <Button id="annuler" fx:id="annulerc" layoutX="483.0" layoutY="357.0" mnemonicParsing="false" onAction="#annulerc" text="annuler" />
+    <Label layoutX="108.0" layoutY="20.0" text="id_calandrier" />
+    <TextField fx:id="idcm" layoutX="249.0" layoutY="14.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>

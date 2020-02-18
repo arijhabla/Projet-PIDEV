@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.McalandrierController">
+  <children>
+    <ImageView id="retour-notion-ecole-fond-bois-blanc_106006-695" fitHeight="383.0" fitWidth="604.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true">
+      <image>
+        <Image url="@../../../../retour-notion-ecole-fond-bois-blanc_106006-695.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Button fx:id="ajoutc" layoutX="209.0" layoutY="67.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="53.0" prefWidth="210.0" text="ajouter calandrier_examen" />
+    <Button fx:id="affc" layoutX="209.0" layoutY="173.0" mnemonicParsing="false" onAction="#afficher" prefHeight="53.0" prefWidth="210.0" text="afficher calandrier_examen" />
+    <Button fx:id="exit" layoutX="443.0" layoutY="332.0" mnemonicParsing="false" onAction="#exit" prefHeight="43.0" prefWidth="107.0" text="exit" />
+  </children>
+</AnchorPane>

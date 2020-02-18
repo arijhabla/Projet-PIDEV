@@ -4,10 +4,16 @@
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.Ajouter_calandrierController">
   <children>
+    <ImageView id="retour-notion-ecole-fond-bois-blanc_106006-695" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+      <image>
+        <Image url="@../../../../retour-notion-ecole-fond-bois-blanc_106006-695.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
     <Label layoutX="99.0" layoutY="51.0" text="id_examen" />
     <Label layoutX="99.0" layoutY="123.0" text="id_matiere" />
     <Label layoutX="99.0" layoutY="170.0" text="id_salle" />
@@ -18,8 +24,9 @@
     <TextField id="id_salle" fx:id="fid_salle" layoutX="243.0" layoutY="160.0" prefWidth="200.0" />
     <TextField id="id_classe" fx:id="fid_classe" layoutX="243.0" layoutY="227.0" prefWidth="200.0" />
     <TextField id="nom" fx:id="fnom" layoutX="243.0" layoutY="270.0" prefWidth="200.0" />
-    <Button fx:id="ajouter" layoutX="452.0" layoutY="334.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
-    <Label layoutX="99.0" layoutY="324.0" text="date_examen" />
+    <Button fx:id="ajouter" layoutX="396.0" layoutY="364.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="35.0" prefWidth="95.0" text="ajouter" />
+    <Label layoutX="99.0" layoutY="320.0" text="date_examen" />
     <TextField fx:id="fdate" layoutX="243.0" layoutY="321.0" prefWidth="200.0" />
+    <Button fx:id="annuler" layoutX="515.0" layoutY="364.0" mnemonicParsing="false" onAction="#annuler" prefHeight="35.0" prefWidth="88.0" text="annuler" />
   </children>
 </AnchorPane>

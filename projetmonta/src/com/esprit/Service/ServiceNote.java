@@ -22,6 +22,12 @@ import java.util.logging.Logger;
  */
 public class ServiceNote implements IServiceNote<Note> {
 
+    private static ServiceNote instance;
+    public static ServiceNote getInstance() {
+   if(instance==null) 
+            instance=new ServiceNote();
+        return instance;    }
+
     private Connection con;
     private Statement ste;
 
@@ -52,7 +58,7 @@ public class ServiceNote implements IServiceNote<Note> {
 
 
     public void delete(Note t) throws SQLException {
-        String sql = "DELETE FROM `esprit`.`note` where (id_eleve ="+t.getId_eleve()+");";
+        String sql = "DELETE FROM `esprit`.`note` where (id_note ="+t.getId_note()+");";
    //String sql = "INSERT INTO fos_user(username) VALUES ('"+c.getUsername()+"');";
   
     try {
