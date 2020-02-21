@@ -6,8 +6,8 @@
 
 package pidev;
 
-import com.esprit.Service.ServiceClub;
-import com.esprit.entite.Club;
+import com.esprit.Service.ServiceMembre;
+import com.esprit.entite.Membre;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -27,20 +27,23 @@ import javafx.stage.Stage;
  *
  * @author Khadija
  */
-public class AjouterclubController implements Initializable {
+public class AjoutermembreController implements Initializable {
 
       @FXML
     private TextField nom;
 
     @FXML
-    private TextField type;
+    private TextField prenom;
+       @FXML
+    private TextField age;
+       
 
     @FXML
     private Button ajouter;
 
     @FXML
     void ajouter(ActionEvent event) throws SQLException {
-       /*if (nom.getText().isEmpty() || type.getText().isEmpty()) {
+       /* if (nom.getText().isEmpty() || prenom.getText().isEmpty() || age.getText().isEmpty()) {
 
              System.out.println("remplir les informations");
              Alert alert = new Alert(AlertType.ERROR);
@@ -51,11 +54,12 @@ public class AjouterclubController implements Initializable {
         } else {
  System.out.println("heyyy");*/
 
-String nom_c=nom.getText();
-String t=type.getText();
-System.out.println(nom_c);
-Club c= new Club(0,nom_c,t);
-ServiceClub sc=ServiceClub.getInstance();
+String nom_m=nom.getText();
+String prenom_m=prenom.getText();
+int age_m=Integer.parseInt(age.getText());
+System.out.println(nom_m);
+Membre c= new Membre(0,nom_m,prenom_m,age_m);
+ServiceMembre sc=ServiceMembre.getInstance();
 sc.ajouter(c);
     }
      @FXML

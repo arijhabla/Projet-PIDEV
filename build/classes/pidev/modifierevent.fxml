@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.ModifiereventController">
+  <children>
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+      <image>
+        <Image preserveRatio="true" smooth="true" url="@../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+      </image>
+    </ImageView>
+    <ImageView id="84098548_815652132237256_748359954968084480_n" fitHeight="65.0" fitWidth="195.0" layoutX="421.0" layoutY="19.0" pickOnBounds="true">
+      <image>
+        <Image preserveRatio="true" smooth="true" url="@../image/84098548_815652132237256_748359954968084480_n.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="113.0" layoutY="128.0" text="id" />
+    <Label layoutX="113.0" layoutY="208.0" text="nom" />
+    <Label layoutX="118.0" layoutY="302.0" text="date" />
+    <TextField fx:id="id" layoutX="269.0" layoutY="125.0" prefWidth="200.0" />
+    <TextField fx:id="nom" layoutX="269.0" layoutY="205.0" prefWidth="200.0" />
+    <Button fx:id="back" layoutX="407.0" layoutY="366.0" mnemonicParsing="false" onAction="#back" text="back" />
+    <Button fx:id="modifier" layoutX="535.0" layoutY="367.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+      <DatePicker fx:id="date2" layoutX="269.0" layoutY="263.0" prefHeight="25.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>

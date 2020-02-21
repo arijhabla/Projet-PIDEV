@@ -4,16 +4,35 @@
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pidev.AjouterclubController">
   <children>
-    <Text layoutX="75.0" layoutY="103.0" scaleX="1.0" scaleY="0.9999937347040251" strokeType="OUTSIDE" strokeWidth="0.0" text="nom" />
-    <Text layoutX="88.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="type" />
+    <ImageView fitHeight="399.3865826416016" fitWidth="601.0" layoutX="-1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+      </image>
+    </ImageView>
+    <Text layoutX="75.0" layoutY="103.0" scaleX="1.0" scaleY="0.9999937347040251" strokeType="OUTSIDE" strokeWidth="0.0" text="nom">
+      <font>
+        <Font name="System Bold" size="20.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text font="$x1" layoutX="88.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="type" />
     <TextField fx:id="nom" layoutX="213.0" layoutY="87.0" prefWidth="200.0" />
     <TextField id="club" fx:id="type" layoutX="213.0" layoutY="271.0" prefWidth="200.0" />
-    <Button fx:id="ajouter" layoutX="490.0" layoutY="303.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
-    <Button fx:id="back" layoutX="497.0" layoutY="354.0" mnemonicParsing="false" onAction="#back" text="back" />
+    <Button fx:id="ajouter" layoutX="490.0" layoutY="303.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter">
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x2" />
+      </font>
+    </Button>
+    <Button fx:id="back" font="$x2" layoutX="497.0" layoutY="354.0" mnemonicParsing="false" onAction="#back" text="back" />
+    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="390.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../image/84098548_815652132237256_748359954968084480_n.png" />
+      </image>
+    </ImageView>
   </children>
 </AnchorPane>

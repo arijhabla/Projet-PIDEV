@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pidev.AjoutermembreController">
+  <children>
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+      <image>
+        <Image url="@../image/60637604_326473804657705_1780967833497239552_n.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="84098548_815652132237256_748359954968084480_n" fitHeight="54.0" fitWidth="215.5" layoutX="407.0" layoutY="21.0" pickOnBounds="true">
+      <image>
+        <Image url="@../image/84098548_815652132237256_748359954968084480_n.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Button fx:id="ajouter" layoutX="494.0" layoutY="367.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
+    <Button fx:id="back" layoutX="394.0" layoutY="368.0" mnemonicParsing="false" onAction="#back" text="back" />
+    <TextField fx:id="nom" layoutX="217.0" layoutY="159.0" prefWidth="200.0" />
+    <TextField fx:id="prenom" layoutX="217.0" layoutY="229.0" prefWidth="200.0" />
+    <TextField fx:id="age" layoutX="217.0" layoutY="304.0" prefWidth="200.0" />
+    <Label layoutX="89.0" layoutY="165.0" text="nom" />
+    <Label layoutX="93.0" layoutY="243.0" text="prenom" />
+    <Label layoutX="93.0" layoutY="307.0" prefWidth="24.999908447265625" text="age" />
+  </children>
+</AnchorPane>

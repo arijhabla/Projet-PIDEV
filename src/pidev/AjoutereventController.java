@@ -6,11 +6,13 @@
 
 package pidev;
 
-import com.esprit.Service.ServiceClub;
-import com.esprit.entite.Club;
+import com.esprit.Service.ServiceEvent;
+import com.esprit.entite.Event;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Date;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,6 +21,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -27,20 +30,22 @@ import javafx.stage.Stage;
  *
  * @author Khadija
  */
-public class AjouterclubController implements Initializable {
+public class AjoutereventController implements Initializable {
 
       @FXML
     private TextField nom;
 
     @FXML
-    private TextField type;
+    private DatePicker date;
 
     @FXML
     private Button ajouter;
 
     @FXML
     void ajouter(ActionEvent event) throws SQLException {
-       /*if (nom.getText().isEmpty() || type.getText().isEmpty()) {
+        
+        
+       /* if (nom.getText().isEmpty() ) {
 
              System.out.println("remplir les informations");
              Alert alert = new Alert(AlertType.ERROR);
@@ -50,14 +55,15 @@ public class AjouterclubController implements Initializable {
             alert.showAndWait();
         } else {
  System.out.println("heyyy");*/
+String nom_e=nom.getText();
+LocalDate datee = date.getValue();
+            Date daten = Date.valueOf(datee);
 
-String nom_c=nom.getText();
-String t=type.getText();
-System.out.println(nom_c);
-Club c= new Club(0,nom_c,t);
-ServiceClub sc=ServiceClub.getInstance();
-sc.ajouter(c);
-    }
+System.out.println(nom_e);
+Event c= new Event(0,nom_e,daten);
+ServiceEvent se=ServiceEvent.getInstance();
+se.ajouter(c);}
+    
      @FXML
     private Button back;
 

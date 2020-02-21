@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pidev.AffichereventController">
+  <children>
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+      <image>
+        <Image url="@../image/60637604_326473804657705_1780967833497239552_n.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="84098548_815652132237256_748359954968084480_n" fitHeight="64.0" fitWidth="209.5" layoutX="411.0" layoutY="19.0" pickOnBounds="true">
+      <image>
+        <Image url="@../image/84098548_815652132237256_748359954968084480_n.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <TableView fx:id="table" layoutX="255.0" layoutY="108.0" prefHeight="200.0" prefWidth="226.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="id_event" fx:id="id" />
+        <TableColumn prefWidth="75.0" text="nom_event" fx:id="nom" />
+        <TableColumn prefWidth="75.0" text="date_event" fx:id="date" />
+      </columns>
+    </TableView>
+    <TextField fx:id="filterField" layoutX="14.0" layoutY="33.0" prefWidth="200.0" />
+    <Button fx:id="back" layoutX="58.0" layoutY="357.0" mnemonicParsing="false" onAction="#back" text="back" />
+    <Button fx:id="afficher" layoutX="390.0" layoutY="358.0" mnemonicParsing="false" onAction="#afficher" text="afficher" />
+    <Button fx:id="modifier" layoutX="465.0" layoutY="357.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+    <Button fx:id="supprimer" layoutX="547.0" layoutY="357.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
+  </children>
+</AnchorPane>

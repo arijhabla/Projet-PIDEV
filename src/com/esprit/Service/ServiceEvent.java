@@ -5,13 +5,14 @@
  */
 
 package com.esprit.Service;
-import com.esprit.entite.Event;
 import com.esprit.IService.IServiceEvent;
-import java.sql.SQLException;
-import java.util.List;
-import java.sql.*;
 import com.esprit.Utils.Database;
+import com.esprit.entite.Event;
+import static com.oracle.nio.BufferSecrets.instance;
+import java.sql.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,6 +21,17 @@ import java.util.logging.Logger;
  * @author Khadija
  */
 public class ServiceEvent implements IServiceEvent<Event>{
+    
+      private static ServiceEvent instance;
+     public static ServiceEvent getInstance(){
+        if(instance==null) 
+            instance=new ServiceEvent();
+        return instance;
+    }
+
+   /* public static ServiceEvent getInstance() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }*/
      private Connection con;
     private Statement ste;
 

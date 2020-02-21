@@ -21,6 +21,17 @@ import java.util.logging.Logger;
  * @author Khadija
  */
 public class ServiceMembre implements IServiceMembre<Membre>{
+    
+          private static ServiceMembre instance;
+     public static ServiceMembre getInstance(){
+        if(instance==null) 
+            instance=new ServiceMembre();
+        return instance;
+    }
+
+   /* public static ServiceMembre getInstance() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }*/
      private Connection con;
     private Statement ste;
 

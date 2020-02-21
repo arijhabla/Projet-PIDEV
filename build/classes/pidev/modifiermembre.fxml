@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pidev.ModifiermembreController">
+  <children>
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" fitHeight="416.0" fitWidth="629.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+      <image>
+        <Image url="@../image/60637604_326473804657705_1780967833497239552_n.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="84098548_815652132237256_748359954968084480_n" fitHeight="41.0" fitWidth="217.0" layoutX="408.0" layoutY="26.0" pickOnBounds="true">
+      <image>
+        <Image url="@../image/84098548_815652132237256_748359954968084480_n.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Label layoutX="78.0" layoutY="95.0" text="id" />
+    <Label layoutX="78.0" layoutY="161.0" text="nom" />
+    <Label layoutX="78.0" layoutY="235.0" text="prenom" />
+    <Label layoutX="78.0" layoutY="311.0" text="age" />
+    <TextField fx:id="id" layoutX="241.0" layoutY="92.0" prefWidth="200.0" />
+    <TextField fx:id="nom" layoutX="241.0" layoutY="155.0" prefWidth="200.0" />
+    <TextField fx:id="prenom" layoutX="241.0" layoutY="229.0" prefWidth="200.0" />
+    <TextField fx:id="age" layoutX="241.0" layoutY="311.0" prefWidth="200.0" />
+    <Button fx:id="modifier" layoutX="552.0" layoutY="374.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+    <Button id="modifier" fx:id="back" layoutX="467.0" layoutY="375.0" mnemonicParsing="false" onAction="#back" text="back" />
+  </children>
+</AnchorPane>

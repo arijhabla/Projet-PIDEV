@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.AjoutereventController">
+  <children>
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" fitHeight="416.0" fitWidth="630.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+      <image>
+        <Image preserveRatio="true" smooth="true" url="@../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+      </image>
+    </ImageView>
+    <ImageView id="84098548_815652132237256_748359954968084480_n" fitHeight="56.0" fitWidth="237.5" layoutX="393.0" layoutY="18.0" pickOnBounds="true">
+      <image>
+        <Image preserveRatio="true" smooth="true" url="@../image/84098548_815652132237256_748359954968084480_n.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="111.0" layoutY="120.0" text="Nom" />
+    <Label layoutX="111.0" layoutY="262.0" text="Date" />
+    <TextField fx:id="nom" layoutX="301.0" layoutY="125.0" prefWidth="200.0" />
+    <Button fx:id="ajouter" layoutX="512.0" layoutY="353.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter" />
+    <Button fx:id="back" layoutX="512.0" layoutY="382.0" mnemonicParsing="false" onAction="#back" text="back" />
+      <DatePicker fx:id="date" layoutX="315.0" layoutY="258.0" />
+  </children>
+</AnchorPane>

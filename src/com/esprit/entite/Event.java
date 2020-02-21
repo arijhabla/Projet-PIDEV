@@ -16,6 +16,10 @@ public class Event {
    String nom_event;
    Date date_event;
 
+    public Event(int i, String nom_e, String t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @Override
     public String toString() {
         return "Event{" + "id_event=" + id_event + ", nom_event=" + nom_event + ", date_event=" + date_event + '}';
@@ -49,6 +53,9 @@ public class Event {
         this.id_event = id_event;
         this.nom_event = nom_event;
         this.date_event = date_event;
+    }
+
+    public Event() {
     }
     
 }

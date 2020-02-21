@@ -4,10 +4,17 @@
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pidev.AfficherclubController">
   <children>
+    <ImageView fitHeight="398.7220458984375" fitWidth="600.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+      </image>
+    </ImageView>
     <TableView fx:id="table" layoutX="200.0" layoutY="123.0" prefHeight="200.0" prefWidth="226.0">
       <columns>
         <TableColumn prefWidth="75.0" text="id_club" fx:id="id" />
@@ -15,10 +22,19 @@
         <TableColumn prefWidth="75.0" text="type_club" fx:id="type" />
       </columns>
     </TableView>
-    <Button fx:id="supprimer" layoutX="519.0" layoutY="343.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
-    <Button fx:id="back" layoutX="40.0" layoutY="344.0" mnemonicParsing="false" onAction="#back" text="Back" />
-    <Button fx:id="afficher" layoutX="346.0" layoutY="343.0" mnemonicParsing="false" onAction="#afficher" text="afficher" />
-    <Button fx:id="modifier" layoutX="444.0" layoutY="350.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+    <Button fx:id="supprimer" layoutX="519.0" layoutY="343.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer">
+      <font>
+        <Font name="System Bold" size="12.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Button fx:id="back" font="$x1" layoutX="40.0" layoutY="344.0" mnemonicParsing="false" onAction="#back" style="" text="Back" />
+    <Button fx:id="afficher" font="$x1" layoutX="366.0" layoutY="344.0" mnemonicParsing="false" onAction="#afficher" text="afficher" />
+    <Button fx:id="modifier" font="$x1" layoutX="444.0" layoutY="344.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
     <TextField fx:id="filterField" layoutX="46.0" layoutY="39.0" prefWidth="200.0" />
+    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="393.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../image/84098548_815652132237256_748359954968084480_n.png" />
+      </image>
+    </ImageView>
   </children>
 </AnchorPane>

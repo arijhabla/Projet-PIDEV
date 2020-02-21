@@ -3,15 +3,33 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/afficherevent.fxml</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/com/esprit/entite/Event.java</file>
             <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/com/esprit/entite/Club.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/ModifiereventController.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/ModifiermembreController.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/ajouterevent.fxml</file>
             <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/StatController.java</file>
-            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/modifierclub.fxml</file>
-            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/AfficherclubController.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/AffichermembreController.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/AjouterclubController.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/com/esprit/Service/ServiceEvent.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/modifiermembre.fxml</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/affichermembre.fxml</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/AjoutermembreController.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/ModifierclubController.java</file>
             <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/com/esprit/Service/ServiceClub.java</file>
-            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/Pidev.java</file>
-            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/Updateeleve.fxml</file>
             <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/ListData.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/com/esprit/Service/ServiceMembre.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/modifierclub.fxml</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/com/esprit/entite/Membre.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/Updateeleve.fxml</file>
             <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/UpdateeleveController.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/AffichereventController.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/AjoutereventController.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/AfficherclubController.java</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/modifierevent.fxml</file>
+            <file>file:/C:/Users/Khadija/Documents/NetBeansProjects/pidev/src/pidev/Pidev.java</file>
         </group>
     </open-files>
 </project-private>
