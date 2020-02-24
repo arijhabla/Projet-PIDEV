@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.MabsenceController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="ajout" layoutX="251.0" layoutY="88.0" mnemonicParsing="false" onAction="#ajouter" text="ajouter absences" />
+      <Button fx:id="aff" layoutX="251.0" layoutY="185.0" mnemonicParsing="false" onAction="#afficher" text="afficher absences" />
+      <Button fx:id="exit" layoutX="483.0" layoutY="338.0" mnemonicParsing="false" onAction="#exit" text="exit" />
+   </children>
+</AnchorPane>

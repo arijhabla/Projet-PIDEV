@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AjouterBulletinController">
+   <children>
+      <ImageView fitHeight="537.0" fitWidth="1201.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="588.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/84098548_815652132237256_748359954968084480_n.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="258.0" layoutY="65.0" text="Ajouter bulletin" textFill="WHITE">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfidele" layoutX="452.0" layoutY="208.0" />
+      <TextField fx:id="tf_idcl" layoutX="452.0" layoutY="269.0" />
+      <TextField fx:id="tf_idmat" layoutX="452.0" layoutY="323.0" />
+      <TextField fx:id="tfmoy" layoutX="452.0" layoutY="382.0" />
+      <Label layoutX="251.0" layoutY="208.0" text="Id eleve" textFill="#d0c6c6">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="269.0" text="Id classe" textFill="#d0c6c6">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="251.0" layoutY="329.0" text="Id matiere" textFill="#d0c6c6">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="382.0" text="Moyenne" textFill="#d0c6c6">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="ajouter" layoutX="607.0" layoutY="457.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+      <Button fx:id="exit" layoutX="713.0" layoutY="457.0" mnemonicParsing="false" onAction="#exit" text="exit" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="499.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AfficherAbsenceController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="513.0" fitWidth="783.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="558.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/84098548_815652132237256_748359954968084480_n.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="200.0" layoutY="57.0" text="Afficher la liste des absences" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="175.0" layoutY="132.0" prefHeight="200.0" prefWidth="387.0">
+        <columns>
+          <TableColumn fx:id="idab" prefWidth="103.0" text="Id absence" />
+          <TableColumn fx:id="datab" prefWidth="104.0" text="Date absence" />
+            <TableColumn fx:id="idmat" prefWidth="83.0" text="Id matiere" />
+            <TableColumn fx:id="idel" prefWidth="96.0" text="Id eleve" />
+        </columns>
+      </TableView>
+      <Button fx:id="supprimer" layoutX="440.0" layoutY="416.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+      <Button fx:id="modifier" layoutX="297.0" layoutY="416.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+      <Button fx:id="afficher" layoutX="590.0" layoutY="416.0" mnemonicParsing="false" onAction="#afficher" text="Afficher" />
+      <Button fx:id="exit" layoutX="188.0" layoutY="416.0" mnemonicParsing="false" onAction="#exit" prefHeight="31.0" prefWidth="64.0" text="exit" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AcceuilController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="gestion_eleve" layoutX="208.0" layoutY="91.0" mnemonicParsing="false" onAction="#gestion_eleve" prefHeight="31.0" prefWidth="128.0" text="gestion eleve" />
+      <Button fx:id="gestion_bul" layoutX="215.0" layoutY="150.0" mnemonicParsing="false" onAction="#gestion_bul" text="gestion bulletin" />
+      <Button fx:id="gestion_abs" layoutX="215.0" layoutY="218.0" mnemonicParsing="false" onAction="#gestion_absence" text="gestion absence" />
+   </children>
+</AnchorPane>

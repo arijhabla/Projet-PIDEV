@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.MbulletinController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="afficher" layoutX="216.0" layoutY="198.0" mnemonicParsing="false" onAction="#afficher" text="afficher bulletin" />
+      <Button fx:id="exit1" layoutX="464.0" layoutY="324.0" mnemonicParsing="false" onAction="#exit1" text="exit" />
+      <Button fx:id="aj" layoutX="216.0" layoutY="100.0" mnemonicParsing="false" onAction="#aj" text="ajouter bulletin" />
+   </children>
+</AnchorPane>

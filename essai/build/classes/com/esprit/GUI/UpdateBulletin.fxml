@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="496.0" prefWidth="737.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.UpdateBulletinController">
+   <children>
+      <ImageView fitHeight="510.0" fitWidth="759.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="545.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/84098548_815652132237256_748359954968084480_n.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="281.0" layoutY="14.0" text="Modifier bulletin" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfidel" layoutX="380.0" layoutY="178.0" />
+      <TextField fx:id="tfidcl" layoutX="380.0" layoutY="237.0" />
+      <TextField fx:id="tfidmat" layoutX="380.0" layoutY="294.0" />
+      <TextField fx:id="tfmoyy" layoutX="380.0" layoutY="355.0" />
+      <Label layoutX="243.0" layoutY="179.0" text="Id eleve" textFill="#ebe9e9">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="243.0" layoutY="238.0" text="Id classe" textFill="#ebe9e9">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="243.0" layoutY="301.0" text="Id matiere" textFill="#ebe9e9">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="356.0" text="Moyenne" textFill="#ebe9e9">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="retour2" layoutX="596.0" layoutY="418.0" mnemonicParsing="false" onAction="#retour2" text="retour" />
+      <Button fx:id="modifier" layoutX="462.0" layoutY="418.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+      <Button fx:id="actualiser1" layoutX="339.0" layoutY="418.0" mnemonicParsing="false" onAction="#actualiser1" text="Actualiser" />
+      <TextField fx:id="idb" layoutX="380.0" layoutY="106.0" />
+      <Label layoutX="234.0" layoutY="107.0" text="id_bulletin" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="546.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AfficherBulletinController">
+   <children>
+      <ImageView fitHeight="636.0" fitWidth="824.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="610.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/84098548_815652132237256_748359954968084480_n.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="197.0" layoutY="64.0" text="Afficher la liste des bulletins" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="145.0" layoutY="152.0" prefHeight="200.0" prefWidth="459.0">
+        <columns>
+          <TableColumn fx:id="idb" prefWidth="75.0" text="id bulletin" />
+            <TableColumn fx:id="ide" prefWidth="75.0" text="id eleve" />
+            <TableColumn fx:id="idc" prefWidth="75.0" text="id classe" />
+            <TableColumn fx:id="idm" prefWidth="118.0" text="id matiere" />
+            <TableColumn fx:id="moy" prefWidth="115.0" text="Moyenne" />
+        </columns>
+      </TableView>
+      <Button fx:id="retour" layoutX="654.0" layoutY="467.0" mnemonicParsing="false" onAction="#retour" text="exit" />
+      <Button fx:id="modifier" layoutX="464.0" layoutY="467.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+      <Button fx:id="supprimer" layoutX="288.0" layoutY="467.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+   </children>
+</AnchorPane>

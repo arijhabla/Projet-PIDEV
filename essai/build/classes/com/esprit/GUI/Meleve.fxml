@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.MeleveController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="ajouteer" layoutX="247.0" layoutY="73.0" mnemonicParsing="false" onAction="#ajouteer" text="ajouter eleve" />
+      <Button fx:id="afficheer" layoutX="246.0" layoutY="169.0" mnemonicParsing="false" onAction="#afficheer" text="afficher eleve" />
+      <Button fx:id="exiit" layoutX="478.0" layoutY="328.0" mnemonicParsing="false" onAction="#exiit" text="exit" />
+   </children>
+</AnchorPane>

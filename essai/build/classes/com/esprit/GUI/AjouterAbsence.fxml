@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="527.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AjouterAbsenceController">
+   <children>
+      <ImageView fitHeight="533.0" fitWidth="793.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="569.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/84098548_815652132237256_748359954968084480_n.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="226.0" layoutY="72.0" text="Ajouter une absence" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="227.0" text="Date absence" textFill="#c9c7c7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="293.0" text="Id matiere" textFill="#c9c7c7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="365.0" text="Nom élève" textFill="#c9c7c7">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_idmat" layoutX="329.0" layoutY="293.0" prefHeight="31.0" prefWidth="218.0" />
+      <DatePicker fx:id="dp_ab" layoutX="329.0" layoutY="233.0" />
+      <Button fx:id="ajouter" layoutX="576.0" layoutY="433.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+      <Button fx:id="exit" layoutX="669.0" layoutY="433.0" mnemonicParsing="false" onAction="#exit" text="exit" />
+      <ComboBox fx:id="cb_ne" layoutX="329.0" layoutY="365.0" prefHeight="31.0" prefWidth="218.0" />
+   </children>
+</AnchorPane>
