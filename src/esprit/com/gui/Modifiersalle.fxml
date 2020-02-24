@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.ModifiersalleController">
+  <children>
+    <ImageView fitHeight="398.722032149904" fitWidth="600.0" layoutX="0.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="55.92848205566406" fitWidth="143.53797374293657" layoutX="427.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/logo.png" />
+      </image>
+    </ImageView>
+    <TextField fx:id="tfc" layoutX="264.0" layoutY="221.0" prefWidth="200.0" />
+    <TextField fx:id="tfids" layoutX="264.0" layoutY="174.0" prefWidth="200.0" />
+    <Label layoutX="90.0" layoutY="177.0" text="Identifiant :" textFill="WHITE">
+      <font>
+        <Font size="20.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="90.0" layoutY="224.0" text="Capacité :" textFill="WHITE" />
+    <Button id="modifiers" fx:id="modifiersalle" layoutX="240.0" layoutY="290.0" mnemonicParsing="false" onAction="#modifiersalle" text="MODIFIER" />
+    <Button fx:id="back2" layoutX="489.0" layoutY="31.0" mnemonicParsing="false" onAction="#back2" text="RETOUR" />
+    <Label layoutX="96.0" layoutY="68.0" text="MODIFICATION DE LA SALLE" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

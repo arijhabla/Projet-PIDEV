@@ -19,6 +19,7 @@ import java.util.logging.Logger;
  * @author dell
  */
 public class Serviceclasse implements IServiceClasse<classe>{
+    private static Serviceclasse instance;
      private Connection con;
     private Statement ste;
 
@@ -30,16 +31,16 @@ public class Serviceclasse implements IServiceClasse<classe>{
     @Override
     public void ajouter(classe t) throws SQLException {
         ste = con.createStatement();
-        String requeteInsert = "INSERT INTO `esprit`.`classe` (`id_classe`,`nbr_eleves`) VALUES ( '" + t.getId_classe() + "', '" + t.getNbr_élèves() + "');";
+        String requeteInsert = "INSERT INTO `esprit`.`classe` (`id_classe`,`nbr_eleves`,`niveau`) VALUES ( '" + t.getId_classe() + "', '" + t.getNbr_eleves() + "', '" + t.getNiveau() + "');";
         ste.executeUpdate(requeteInsert);
     }
     public void ajouter1(classe e) throws SQLException
     {
    
-       PreparedStatement pre=con.prepareStatement("INSERT INTO `esprit`.`classe` (`id_classe`,`nbr_eleves`) VALUES ( ?, ?);");
+       PreparedStatement pre=con.prepareStatement("INSERT INTO `esprit`.`classe` (`id_classe`,`nbr_eleves`,`niveau`) VALUES ( ?, ?, ?);");
    pre.setInt(1, e.getId_classe());
-       pre.setInt(2,e.getNbr_élèves());
-   
+       pre.setInt(2,e.getNbr_eleves());
+       pre.setString(3,e.getNiveau());  
 
    
     pre.executeUpdate();
@@ -61,7 +62,7 @@ public class Serviceclasse implements IServiceClasse<classe>{
 
     }
     public void update(classe t) throws SQLException {
-          String sql ="UPDATE `esprit`.`classe` SET `id_classe`='"+t.getId_classe() + "',`nbr_eleves`='"+t.getNbr_élèves() + "'  WHERE `id_classe`='"+t.getId_classe()+"' ";
+          String sql ="UPDATE `esprit`.`classe` SET `id_classe`='"+t.getId_classe() + "',`nbr_eleves`='"+t.getNbr_eleves() + "',`niveau`='"+t.getNiveau() + "'  WHERE `id_classe`='"+t.getId_classe()+"' ";
   
     try {
             Statement stl = con.createStatement();
@@ -77,10 +78,10 @@ public class Serviceclasse implements IServiceClasse<classe>{
     ResultSet rs=ste.executeQuery("select * from classe");
      while (rs.next()) {                
                int id_classe=rs.getInt(1);
-             int nbr_eleves=rs.getInt("nbr_eleves");
-             
+             int nbr_eleves=rs.getInt(2);
+             String niveau=rs.getString("niveau");
            
-             classe c=new classe(id_classe,nbr_eleves);
+             classe c=new classe(id_classe,nbr_eleves, niveau);
      arr.add(c);
      }
     return arr;
@@ -116,7 +117,7 @@ public class Serviceclasse implements IServiceClasse<classe>{
             while(rs.next()){
                 S.setId_classe(rs.getInt("id_classe"));
                 S.setNbr_eleves(rs.getInt("nbr_eleves"));
-              
+                S.setNiveau(rs.getString("niveau"));
                 System.out.println("ok");
             }
             return S;
@@ -126,5 +127,9 @@ catch (SQLException ex){
 }
         return null;
     }
-    
+    public static Serviceclasse getInstance(){
+        if (instance==null)
+            instance=new Serviceclasse();
+        return instance;
+    }
 }

@@ -20,7 +20,8 @@ import java.util.logging.Logger;
  * @author dell
  */
 public class Serviceemploi implements IServiceEmploidutemps<emploidutemps>{
-     private Connection con;
+    private static Serviceemploi instance; 
+    private Connection con;
     private Statement ste;
 
     public Serviceemploi() {
@@ -31,15 +32,15 @@ public class Serviceemploi implements IServiceEmploidutemps<emploidutemps>{
   
     public void ajouter(emploidutemps t) throws SQLException {
         ste = con.createStatement();
-        String requeteInsert = "INSERT INTO `esprit`.`emploidutemps` (`id_emploi`) VALUES ( '" + t.getId_emploi() +"');";
+        String requeteInsert = "INSERT INTO `esprit`.`emploidutemps` (`id_emploi`,`nom_emp`) VALUES ( '" + t.getId_emploi() +"','" + t.getNom_emp() +"');";
         ste.executeUpdate(requeteInsert);
     }
     public void ajouter1(emploidutemps e) throws SQLException
     {
    
-       PreparedStatement pre=con.prepareStatement("INSERT INTO `esprit`.`emploidutemps` (`id_emploi`) VALUES ( ?, ?);");
+       PreparedStatement pre=con.prepareStatement("INSERT INTO `esprit`.`emploidutemps` (`id_emploi`,`nom_emp`) VALUES ( ?, ?);");
    pre.setInt(1, e.getId_emploi());
-       
+   pre.setString(2,e.getNom_emp());  
    
 
    
@@ -62,8 +63,7 @@ public class Serviceemploi implements IServiceEmploidutemps<emploidutemps>{
 
     }
     public void update(emploidutemps t) throws SQLException {
-          String sql ="UPDATE `esprit`.`emploidutemps` SET `id_emploi`='"+t.getId_emploi() + "'  WHERE `id_emploi`='"+t.getId_emploi()+"' ";
-  
+          String sql ="UPDATE `esprit`.`emploidutemps` SET `id_emploi`='"+t.getId_emploi() + "',`nom_emp`='"+t.getNom_emp() + "'  WHERE `id_emploi`='"+t.getId_emploi()+"' ";
     try {
             Statement stl = con.createStatement();
            int rs =stl.executeUpdate(sql);
@@ -78,13 +78,19 @@ public class Serviceemploi implements IServiceEmploidutemps<emploidutemps>{
     ResultSet rs=ste.executeQuery("select * from emploidutemps");
      while (rs.next()) {                
                int id_emploi=rs.getInt(1);
+               String nom_emp=rs.getString("nom_emp");
             
              
            
-            emploidutemps e=new emploidutemps(id_emploi);
+            emploidutemps e=new emploidutemps(id_emploi, nom_emp);
      arr.add(e);
      }
     return arr;
+    }
+     public static Serviceemploi getInstance(){
+        if (instance==null)
+            instance=new Serviceemploi();
+        return instance;
     }
     
 }

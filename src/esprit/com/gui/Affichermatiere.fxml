@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.AffichermatiereController">
+  <children>
+    <ImageView fitHeight="408.30351430424736" fitWidth="614.4182739257812" layoutX="0.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="51.92848205566406" fitWidth="133.27214637534652" layoutX="457.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/logo.png" />
+      </image>
+    </ImageView>
+    <TableView fx:id="tabv" layoutX="80.0" layoutY="121.0" prefHeight="200.0" prefWidth="345.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="93.0" text="Identifiant" fx:id="idmat" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="106.0" text="Nom" fx:id="tfnom" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="145.0" text="Nombre d'heures" fx:id="tfh" />
+      </columns>
+    </TableView>
+    <Label layoutX="116.0" layoutY="64.0" text="AFFICHAGE DES MATIERES" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <Button fx:id="affichermat" layoutX="65.0" layoutY="341.0" mnemonicParsing="false" onAction="#affichermat" prefWidth="106.0" text="AFFICHER" />
+    <Button fx:id="suppmat" layoutX="210.0" layoutY="341.0" mnemonicParsing="false" onAction="#suppmat" text="SUPRIMER" />
+    <Button fx:id="modmat" layoutX="354.0" layoutY="341.0" mnemonicParsing="false" onAction="#modmat" text="MODIFIER" />
+    <Button fx:id="back3" layoutX="490.0" layoutY="38.0" mnemonicParsing="false" onAction="#back3" text="RETOUR" />
+  </children>
+</AnchorPane>

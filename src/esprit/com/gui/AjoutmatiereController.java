@@ -5,9 +5,11 @@
  */
 
 package esprit.com.gui;
-import com.esprit.Entite.classe;
-import com.esprit.Service.Serviceclasse;
-import static esprit.com.gui.AfficherclasseController.niveau;
+
+import com.esprit.Entite.emploidutemps;
+import com.esprit.Entite.matiere;
+import com.esprit.Service.Serviceemploi;
+import com.esprit.Service.Servicematiere;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -30,54 +32,49 @@ import javafx.stage.Stage;
  *
  * @author dell
  */
-public class AjoutclasseController implements Initializable {
+public class AjoutmatiereController implements Initializable {
+@FXML
+    private TextField tfnom_matiere;
+@FXML
+    private TextField tfnbr_heures;
     @FXML
-    private TextField tfnbr;
-    @FXML
-    private Button bvalider;
-    @FXML
-    private Button back;
+    private Button bvaliderm;
     @FXML
     private Font x1;
     @FXML
-    private TextField tfniv;
-   
-
+    private Button BCK;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-
-    @FXML
-    private void ajouter(ActionEvent event) {
+    } 
+     @FXML
+    private void ajouter_matiere(ActionEvent event) {
          try {
-                int nbr_eleves=Integer.parseInt(tfnbr.getText());
-                String niveau=tfniv.getText();
-            System.out.println(nbr_eleves);
-            System.out.println(niveau);
-            classe c= new classe(0,nbr_eleves,niveau);
-            Serviceclasse sc=Serviceclasse.getInstance(); 
-            sc.ajouter(c);
-//
-            
+String nom_matiere=tfnom_matiere.getText(); 
+int nbr_heures=Integer.parseInt(tfnbr_heures.getText());
+            System.out.println(nom_matiere);
+            System.out.println(nbr_heures);
+            matiere m= new matiere(0, nom_matiere ,nbr_heures);
+            Servicematiere sm=Servicematiere.getInstance(); 
+            sm.ajouter(m);
         } catch (SQLException ex) {
-            Logger.getLogger(AjoutclasseController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AjoutemploiController.class.getName()).log(Level.SEVERE, null, ex);
         
     }
     
-
-    } 
+    
+}
 
     @FXML
-    private void back(ActionEvent event) {
-          try {
+    private void BCK(ActionEvent event) {
+              try {
             
-            Parent root = FXMLLoader.load(getClass().getResource("gotoclasse.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("gotomat.fxml"));
            Scene scene = new Scene(root);
-            Stage stage = (Stage) back.getScene().getWindow();
+            Stage stage = (Stage) BCK.getScene().getWindow();
             stage.close();
             
             stage.setScene(scene);
@@ -87,4 +84,5 @@ public class AjoutclasseController implements Initializable {
             System.out.println(ex.getMessage());
         }
     }
-}
+    }
+    

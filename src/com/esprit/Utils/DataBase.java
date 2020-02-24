@@ -11,10 +11,10 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Pc
+ * @author dell
  */
 public class DataBase {
-     String url = "jdbc:mariadb://localhost:3306/esprit?characterEncoding=latin1&useConfigs=maxPerformance";
+         String url = "jdbc:mysql://localhost:3306/esprit?characterEncoding=latin1&useConfigs=maxPerformance";
      String login = "root";
      String pwd = "";
     public  static DataBase db;
@@ -37,6 +37,4 @@ public class DataBase {
         db=new DataBase();
     return db;
     }     
-     
-    
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.AffichersalleController">
+  <children>
+    <ImageView fitHeight="417.2779541015625" fitWidth="627.9230913574117" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="49.92848205566406" fitWidth="128.13923443336694" layoutX="471.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/logo.png" />
+      </image>
+    </ImageView>
+    <TableView fx:id="tab1" layoutX="127.0" layoutY="123.0" prefHeight="200.0" prefWidth="321.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="155.0" text="Identifiant" fx:id="tfids" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="171.0" text="Capacité" fx:id="tfcap" />
+      </columns>
+    </TableView>
+    <Label layoutX="133.0" layoutY="63.0" text="AFFICHAGE DES SALLES" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <Button fx:id="modifiersalle" layoutX="377.0" layoutY="346.0" mnemonicParsing="false" onAction="#modifiersalle" text="MODIFIER" />
+    <Button fx:id="supprimersalle" layoutX="245.0" layoutY="347.0" mnemonicParsing="false" onAction="#supprimersalle" text="SUPPRIMER" />
+    <Button fx:id="affichersalle" layoutX="113.0" layoutY="346.0" mnemonicParsing="false" onAction="#affichersalle" prefWidth="105.0" text="AFFICHER" />
+    <Button fx:id="backk" layoutX="528.0" layoutY="22.0" mnemonicParsing="false" onAction="#backk" text="RETOUR" />
+  </children>
+</AnchorPane>

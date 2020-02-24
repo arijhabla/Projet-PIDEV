@@ -18,7 +18,7 @@ public class salle {
         return id_salle;
     }
 
-    public int getCapacité() {
+    public int getCapacite() {
         return capacite;
     }
 
@@ -26,7 +26,7 @@ public class salle {
         this.id_salle = id_salle;
     }
 
-    public void setCapacité(int capacite) {
+    public void setCapacite(int capacite) {
         this.capacite = capacite;
     }
     public salle(int id_salle, int capacite) {

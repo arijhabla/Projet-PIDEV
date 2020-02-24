@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package esprit.com.gui;
+
 import com.esprit.Entite.classe;
+import com.esprit.Entite.matiere;
 import com.esprit.Service.Serviceclasse;
-import static esprit.com.gui.AfficherclasseController.niveau;
+import com.esprit.Service.Servicematiere;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,18 +29,19 @@ import javafx.stage.Stage;
  *
  * @author dell
  */
-public class AjoutclasseController implements Initializable {
-    @FXML
-    private TextField tfnbr;
-    @FXML
-    private Button bvalider;
-    @FXML
-    private Button back;
+public class ModifiermatController implements Initializable {
     @FXML
     private Font x1;
     @FXML
-    private TextField tfniv;
-   
+    private TextField tfidm;
+    @FXML
+    private TextField tfnom;
+    @FXML
+    private TextField tfnbr;
+    @FXML
+    private Button modmat;
+    @FXML
+    private Button back4;
 
     /**
      * Initializes the controller class.
@@ -52,32 +52,26 @@ public class AjoutclasseController implements Initializable {
     }    
 
     @FXML
-    private void ajouter(ActionEvent event) {
-         try {
-                int nbr_eleves=Integer.parseInt(tfnbr.getText());
-                String niveau=tfniv.getText();
-            System.out.println(nbr_eleves);
-            System.out.println(niveau);
-            classe c= new classe(0,nbr_eleves,niveau);
-            Serviceclasse sc=Serviceclasse.getInstance(); 
-            sc.ajouter(c);
-//
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(AjoutclasseController.class.getName()).log(Level.SEVERE, null, ex);
-        
-    }
-    
+    private void modmat(ActionEvent event) throws SQLException {
+         int id_matiere=Integer.parseInt(tfidm.getText());
 
-    } 
+         String nom_matiere=tfnom.getText();
+         int nbr_heures=Integer.parseInt(tfnbr.getText());
+       
+        matiere m1 = new matiere(id_matiere,nom_matiere,nbr_heures);
+        Servicematiere sm=Servicematiere.getInstance();
+
+
+sm.update(m1);
+    }
 
     @FXML
-    private void back(ActionEvent event) {
-          try {
+    private void back4(ActionEvent event) {
+           try {
             
-            Parent root = FXMLLoader.load(getClass().getResource("gotoclasse.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Affichermatiere.fxml"));
            Scene scene = new Scene(root);
-            Stage stage = (Stage) back.getScene().getWindow();
+            Stage stage = (Stage) back4.getScene().getWindow();
             stage.close();
             
             stage.setScene(scene);
@@ -87,4 +81,5 @@ public class AjoutclasseController implements Initializable {
             System.out.println(ex.getMessage());
         }
     }
+    
 }

@@ -19,7 +19,8 @@ import java.util.logging.Logger;
  * @author dell
  */
 public class Servicesalle {
-   private Connection con;
+   private static Servicesalle instance;
+    private Connection con;
     private Statement ste;
 
     public Servicesalle() {
@@ -30,7 +31,7 @@ public class Servicesalle {
     
     public void ajouter(salle t) throws SQLException {
         ste = con.createStatement();
-        String requeteInsert = "INSERT INTO `esprit`.`salle` (`id_salle`,`capacite`) VALUES ( '" + t.getId_salle() + "', '" + t.getCapacité() + "');";
+        String requeteInsert = "INSERT INTO `esprit`.`salle` (`id_salle`,`capacite`) VALUES ( '" + t.getId_salle() + "', '" + t.getCapacite() + "');";
         ste.executeUpdate(requeteInsert);
     }
     public void ajouter1(salle e) throws SQLException
@@ -38,7 +39,7 @@ public class Servicesalle {
    
        PreparedStatement pre=con.prepareStatement("INSERT INTO `esprit`.`salle` (`id_salle`,`capacite`) VALUES ( ?, ?);");
    pre.setInt(1, e.getId_salle());
-       pre.setInt(2,e.getCapacité());
+       pre.setInt(2,e.getCapacite());
    
 
    
@@ -61,7 +62,7 @@ public class Servicesalle {
 
     }
     public void update(salle t) throws SQLException {
-          String sql ="UPDATE `esprit`.`salle` SET `id_salle`='"+t.getId_salle() + "',`capacite`='"+t.getCapacité() + "'  WHERE `id_salle`='"+t.getId_salle()+"' ";
+          String sql ="UPDATE `esprit`.`salle` SET `id_salle`='"+t.getId_salle() + "',`capacite`='"+t.getCapacite() + "'  WHERE `id_salle`='"+t.getId_salle()+"' ";
   
     try {
             Statement stl = con.createStatement();
@@ -84,6 +85,11 @@ public class Servicesalle {
      arr.add(c);
      }
     return arr;
+    }
+     public static Servicesalle getInstance(){
+        if (instance==null)
+            instance=new Servicesalle();
+        return instance;
     }
       
 }

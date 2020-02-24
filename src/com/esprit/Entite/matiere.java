@@ -15,22 +15,22 @@ public class matiere {
     private String nom_matiere;
     private int nbr_heures;
 
-    public int getId_matière() {
+    public int getId_matiere() {
         return id_matiere;
     }
 
-    public String getNom_matière() {
+    public String getNom_matiere() {
         return nom_matiere;
     }
      public int getNbr_heures() {
         return nbr_heures;
     }
 
-    public void setId_matière(int id_matiere) {
+    public void setId_matiere(int id_matiere) {
         this.id_matiere = id_matiere;
     }
 
-    public void setNom_matière(String nom_matiere) {
+    public void setNom_matiere(String nom_matiere) {
         this.nom_matiere = nom_matiere;
     }
     public void setNbr_heures(int nbr_heures) {

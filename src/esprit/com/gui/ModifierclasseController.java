@@ -3,17 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package esprit.com.gui;
+
 import com.esprit.Entite.classe;
 import com.esprit.Service.Serviceclasse;
-import static esprit.com.gui.AfficherclasseController.niveau;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,18 +27,20 @@ import javafx.stage.Stage;
  *
  * @author dell
  */
-public class AjoutclasseController implements Initializable {
+public class ModifierclasseController implements Initializable {
     @FXML
-    private TextField tfnbr;
+    private TextField tfnb;
     @FXML
-    private Button bvalider;
+    private Button modifier;
     @FXML
-    private Button back;
+    private TextField id;
+    @FXML
+    private Button back1;
     @FXML
     private Font x1;
     @FXML
-    private TextField tfniv;
-   
+    private TextField tfni;
+    
 
     /**
      * Initializes the controller class.
@@ -52,32 +51,25 @@ public class AjoutclasseController implements Initializable {
     }    
 
     @FXML
-    private void ajouter(ActionEvent event) {
-         try {
-                int nbr_eleves=Integer.parseInt(tfnbr.getText());
-                String niveau=tfniv.getText();
-            System.out.println(nbr_eleves);
-            System.out.println(niveau);
-            classe c= new classe(0,nbr_eleves,niveau);
-            Serviceclasse sc=Serviceclasse.getInstance(); 
-            sc.ajouter(c);
-//
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(AjoutclasseController.class.getName()).log(Level.SEVERE, null, ex);
-        
-    }
-    
+    private void modifier(ActionEvent event) throws SQLException {
+              int id_classe=Integer.parseInt(id.getText());
 
-    } 
+         int nbr_eleves=Integer.parseInt(tfnb.getText());
+       String niveau=tfni.getText();
+        classe c1 = new classe(id_classe,nbr_eleves, niveau);
+        Serviceclasse sc=Serviceclasse.getInstance();
+
+
+sc.update(c1);
+    }
 
     @FXML
-    private void back(ActionEvent event) {
+    private void back1(ActionEvent event) {
           try {
             
-            Parent root = FXMLLoader.load(getClass().getResource("gotoclasse.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Afficherclasse.fxml"));
            Scene scene = new Scene(root);
-            Stage stage = (Stage) back.getScene().getWindow();
+            Stage stage = (Stage) back1.getScene().getWindow();
             stage.close();
             
             stage.setScene(scene);
@@ -87,4 +79,7 @@ public class AjoutclasseController implements Initializable {
             System.out.println(ex.getMessage());
         }
     }
+
+   
+    
 }

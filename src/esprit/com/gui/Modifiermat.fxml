@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.ModifiermatController">
+  <children>
+    <ImageView fitHeight="408.30351430424736" fitWidth="614.4182739257812" layoutX="0.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="59.92848205566406" fitWidth="153.8037966987663" layoutX="430.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/logo.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="17.0" layoutY="130.0" text="Identifiant :" textFill="WHITE">
+      <font>
+        <Font size="20.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="17.0" layoutY="179.0" text="Nom :" textFill="WHITE" />
+    <Label font="$x1" layoutX="17.0" layoutY="220.0" text="Nombre d'heures :" textFill="WHITE" />
+    <TextField fx:id="tfidm" layoutX="190.0" layoutY="126.0" prefWidth="200.0" />
+    <TextField fx:id="tfnom" layoutX="190.0" layoutY="175.0" prefWidth="200.0" />
+    <TextField fx:id="tfnbr" layoutX="190.0" layoutY="220.0" prefWidth="200.0" />
+    <Button fx:id="modmat" layoutX="156.0" layoutY="295.0" mnemonicParsing="false" onAction="#modmat" text="MODIFIER" />
+    <Button fx:id="back4" layoutX="471.0" layoutY="33.0" mnemonicParsing="false" onAction="#back4" text="RETOUR" />
+    <Label layoutX="139.0" layoutY="71.0" text="MODIFIER LA MATIERE" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

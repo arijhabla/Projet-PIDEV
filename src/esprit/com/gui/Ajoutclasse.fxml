@@ -4,12 +4,36 @@
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.AjoutclasseController">
   <children>
-    <TextField fx:id="tfnbr_eleves" layoutX="261.0" layoutY="153.0" prefWidth="200.0" />
-    <Label layoutX="115.0" layoutY="159.0" prefWidth="110.0" text="nombre élèves" />
-    <Button fx:id="bvalider" layoutX="254.0" layoutY="236.0" mnemonicParsing="false" text="valider" />
+    <ImageView fitHeight="398.72205890992484" fitWidth="600.0" layoutX="0.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <TextField id="tfnbr_eleves" fx:id="tfnbr" layoutX="237.0" layoutY="174.0" prefWidth="200.0" />
+    <Label layoutX="64.0" layoutY="174.0" prefWidth="154.0" text="Nombre élèves :" textFill="WHITE">
+      <font>
+        <Font size="20.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Button fx:id="bvalider" layoutX="237.0" layoutY="275.0" mnemonicParsing="false" onAction="#ajouter" text="VALIDER" />
+    <Button fx:id="back" layoutX="473.0" layoutY="34.0" mnemonicParsing="false" onAction="#back" prefWidth="84.0" text="RETOUR" />
+    <ImageView fitHeight="55.966705322265625" fitWidth="143.63607476610701" layoutX="437.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/logo.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="141.0" layoutY="76.0" minHeight="38.0" prefHeight="38.0" prefWidth="324.0" text="AJOUT D'UNE CLASSE" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="64.0" layoutY="216.0" text="Niveau :" textFill="WHITE" />
+    <TextField fx:id="tfniv" layoutX="237.0" layoutY="216.0" prefWidth="200.0" />
   </children>
 </AnchorPane>

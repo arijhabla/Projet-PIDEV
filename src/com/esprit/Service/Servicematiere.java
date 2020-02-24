@@ -19,7 +19,8 @@ import java.util.logging.Logger;
  * @author dell
  */
 public class Servicematiere implements IServicematiere<matiere> {
- private Connection con;
+private static Servicematiere instance;
+    private Connection con;
     private Statement ste;
 
     public Servicematiere() {
@@ -30,15 +31,15 @@ public class Servicematiere implements IServicematiere<matiere> {
     @Override
     public void ajouter(matiere t) throws SQLException {
         ste = con.createStatement();
-        String requeteInsert = "INSERT INTO `esprit`.`matiere` (`id_matiere`,`nom_matiere`,`nbr_heures`) VALUES ( '" + t.getId_matière() + "', '" + t.getNom_matière() + "', '"+t.getNbr_heures()+"');";
+        String requeteInsert = "INSERT INTO `esprit`.`matiere` (`id_matiere`,`nom_matiere`,`nbr_heures`) VALUES ( '" + t.getId_matiere() + "', '" + t.getNom_matiere() + "', '"+t.getNbr_heures()+"');";
         ste.executeUpdate(requeteInsert);
     }
     public void ajouter1(matiere m) throws SQLException
     {
    
        PreparedStatement pre=con.prepareStatement("INSERT INTO `esprit`.`matiere` (`id_matiere`,`nom_matiere`,`nbr_heures`) VALUES ( ?, ?, ?);");
-   pre.setInt(1, m.getId_matière());
-       pre.setString(2,m.getNom_matière());
+   pre.setInt(1, m.getId_matiere());
+       pre.setString(2,m.getNom_matiere());
         pre.setInt(3, m.getNbr_heures());
    
 
@@ -49,7 +50,7 @@ public class Servicematiere implements IServicematiere<matiere> {
 
 
     public void delete(matiere  t) throws SQLException {
-        String sql = "DELETE FROM `esprit`.`matiere` where (id_matiere ="+t.getId_matière()+");";
+        String sql = "DELETE FROM `esprit`.`matiere` where (id_matiere ="+t.getId_matiere()+");";
    //String sql = "INSERT INTO fos_user(username) VALUES ('"+c.getUsername()+"');";
   
     try {
@@ -62,7 +63,7 @@ public class Servicematiere implements IServicematiere<matiere> {
 
     }
     public void update(matiere t) throws SQLException {
-          String sql ="UPDATE `esprit`.`matiere` SET `id_matiere`='"+t.getId_matière() + "',`nom_matiere`='"+t.getNom_matière() +"', `nbr_heures`='"+t.getNbr_heures() + "'  WHERE `id_matiere`='"+t.getId_matière()+"' ";
+          String sql ="UPDATE `esprit`.`matiere` SET `id_matiere`='"+t.getId_matiere() + "',`nom_matiere`='"+t.getNom_matiere() +"', `nbr_heures`='"+t.getNbr_heures() + "'  WHERE `id_matiere`='"+t.getId_matiere()+"' ";
   
     try {
             Statement stl = con.createStatement();
@@ -82,10 +83,15 @@ public class Servicematiere implements IServicematiere<matiere> {
              int nbr_heures=rs.getInt(3);
              
            
-             matiere m=new matiere(id_matiere, "nom_matiere", nbr_heures);
+             matiere m=new matiere(id_matiere, nom_matiere, nbr_heures);
      arr.add(m);
      }
     return arr;
+    }
+     public static Servicematiere getInstance(){
+        if (instance==null)
+            instance=new Servicematiere();
+        return instance;
     }
        
 }

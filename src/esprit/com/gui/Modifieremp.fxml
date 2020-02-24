@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.ModifierempController">
+  <children>
+    <ImageView fitHeight="407.9744717717452" fitWidth="613.923095703125" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="54.92848205566406" fitWidth="140.97151800397913" layoutX="442.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/logo.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="77.0" layoutY="146.0" text="Identifiant :" textFill="WHITE">
+      <font>
+        <Font size="20.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="77.0" layoutY="204.0" text="Nom :" textFill="WHITE" />
+    <TextField fx:id="tfidee" layoutX="196.0" layoutY="147.0" prefWidth="200.0" />
+    <TextField fx:id="tfn" layoutX="196.0" layoutY="211.0" prefWidth="200.0" />
+    <Button fx:id="modifiere" layoutX="186.0" layoutY="283.0" mnemonicParsing="false" onAction="#modifiere" text="MODIFIER" />
+    <Button fx:id="BACK" layoutX="478.0" layoutY="30.0" mnemonicParsing="false" onAction="#BACK" text="RETOUR" />
+    <Label layoutX="81.0" layoutY="66.0" text="MODIFIER L'EMPLOI DU TEMPS" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>
