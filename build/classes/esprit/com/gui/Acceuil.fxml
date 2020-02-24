@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.AcceuilController">
+  <children>
+    <ImageView fitHeight="450.00005218332115" fitWidth="600.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../../../../../Desktop/background.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="450.00006103515625" fitWidth="677.1635603504275" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <Button fx:id="bclasse" layoutX="226.0" layoutY="128.0" mnemonicParsing="false" onAction="#gotoclasse" prefHeight="43.0" prefWidth="183.0" text="CLASSE" underline="false" wrapText="false" />
+    <Button id="bemploi_du_temps" fx:id="bemp" layoutX="226.0" layoutY="193.0" mnemonicParsing="false" onAction="#gotoemp" prefHeight="43.0" prefWidth="183.0" text="EMPLOI DU TEMPS" />
+    <Button fx:id="bmatiere" layoutX="226.0" layoutY="259.0" mnemonicParsing="false" onAction="#gotomat" prefHeight="43.0" prefWidth="183.0" text="MATIERE" />
+    <Button fx:id="bsalle" layoutX="226.0" layoutY="323.0" mnemonicParsing="false" onAction="#gotosalle" prefHeight="43.0" prefWidth="183.0" text="SALLE" />
+    <ImageView fitHeight="58.70612203656339" fitWidth="150.66666412353516" layoutX="409.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../../../../../Desktop/logo.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="58.70613098144531" fitWidth="150.666679116277" layoutX="493.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/logo.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="102.0" layoutY="78.0" minHeight="14.293975830078125" prefHeight="37.0" text="GESTION DES EMPLOIS DU TEMPS" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

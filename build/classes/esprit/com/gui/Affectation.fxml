@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.AffectationController">
+  <children>
+    <ImageView fitHeight="398.72211577576934" fitWidth="600.0001220703125" layoutX="0.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="58.92848205566406" fitWidth="151.23733595333977" layoutX="435.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/logo.png" />
+      </image>
+    </ImageView>
+    <ComboBox fx:id="Cclasse" layoutX="112.0" layoutY="109.0" prefWidth="131.0" promptText="Classes">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+        
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <ComboBox id="Csalle" fx:id="Cmatiere" layoutX="112.0" layoutY="186.0" prefWidth="131.0" promptText="Matières">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+        
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="Csalle" layoutX="113.0" layoutY="265.0" prefWidth="131.0" promptText="Salles">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+    
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Button fx:id="affectation" layoutX="244.0" layoutY="328.0" mnemonicParsing="false" onAction="#affectation" text="AFFECTER" />
+    <TextField fx:id="date" layoutX="300.0" layoutY="173.0" prefWidth="200.0" promptText="exemple: 01/01/2020" text="" />
+    <TextField fx:id="heure" layoutX="300.0" layoutY="239.0" prefWidth="200.0" promptText="exemple: 8-10" />
+  </children>
+</AnchorPane>

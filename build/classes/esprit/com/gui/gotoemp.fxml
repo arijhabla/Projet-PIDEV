@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.GotoempController">
+  <children>
+    <ImageView fitHeight="450.0" fitWidth="600.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <Button fx:id="afficheremp" layoutX="195.0" layoutY="128.0" mnemonicParsing="false" onAction="#afficheremp" prefHeight="63.0" prefWidth="168.0" text="AFFICHER" />
+    <Button fx:id="ajouteremp" layoutX="195.0" layoutY="221.0" mnemonicParsing="false" onAction="#ajouteremp" prefHeight="63.0" prefWidth="168.0" text="AJOUTER" />
+    <ImageView fitHeight="48.92848205566406" fitWidth="125.57278299868587" layoutX="445.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/logo.png" />
+      </image>
+    </ImageView>
+    <Button fx:id="ret" layoutX="500.0" layoutY="30.0" mnemonicParsing="false" onAction="#ret" text="RETOUR" />
+    <Label layoutX="159.0" layoutY="71.0" text="EMPLOI DU TEMPS" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <Button id="ajouteremp" fx:id="affecter" layoutX="195.0" layoutY="313.0" mnemonicParsing="false" onAction="#affecter" prefHeight="63.0" prefWidth="168.0" text="AFFECTER" />
+  </children>
+</AnchorPane>

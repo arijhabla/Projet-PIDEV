@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.GotomatController">
+  <children>
+    <ImageView fitHeight="450.0" fitWidth="600.0" layoutX="1.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="54.92848205566406" fitWidth="140.9715139514451" layoutX="428.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/logo.png" />
+      </image>
+    </ImageView>
+    <Button fx:id="affichermat" layoutX="228.0" layoutY="136.0" mnemonicParsing="false" onAction="#affichermat" prefHeight="55.0" prefWidth="128.0" text="AFFICHER" />
+    <Button fx:id="ajoutermat" layoutX="228.0" layoutY="228.0" mnemonicParsing="false" onAction="#ajoutermat" prefHeight="54.928466796875" prefWidth="128.0" text="AJOUTER" />
+    <Button fx:id="retour1" layoutX="498.0" layoutY="27.0" mnemonicParsing="false" onAction="#retour1" text="RETOUR" />
+    <Label layoutX="233.0" layoutY="61.0" text="MATIERE" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

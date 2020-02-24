@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.GotoclasseController">
+  <children>
+    <ImageView fitHeight="450.0" fitWidth="600.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <Button id="tfajouter" fx:id="bajouter" layoutX="192.0" layoutY="110.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="64.0" prefWidth="187.0" text="AJOUTER" />
+    <Button id="tfafficher" fx:id="bafficher" layoutX="192.0" layoutY="242.0" mnemonicParsing="false" onAction="#afficher" prefHeight="64.0" prefWidth="187.0" text="AFFICHER" />
+    <ImageView fitHeight="49.00001525878906" fitWidth="125.75636875553981" layoutX="446.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/logo.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="236.0" layoutY="50.0" text="CLASSE" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <Button fx:id="RETOUR" layoutX="490.0" layoutY="37.0" mnemonicParsing="false" onAction="#RETOUR" text="RETOUR" />
+  </children>
+</AnchorPane>

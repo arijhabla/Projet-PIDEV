@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="esprit.com.gui.AfficherempController">
+  <children>
+    <ImageView fitHeight="408.30351430424736" fitWidth="614.4182739257812" layoutX="0.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/background.jpg" />
+      </image>
+    </ImageView>
+    <TableView id="table" fx:id="tab" layoutX="105.0" layoutY="99.0" prefHeight="228.0" prefWidth="412.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="206.0" text="Identifiant" fx:id="tfide" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="205.0" text="Nom " fx:id="tfnome" />
+      </columns>
+    </TableView>
+    <Button id="aficher" fx:id="afficheremp" layoutX="252.0" layoutY="368.0" mnemonicParsing="false" onAction="#afficheremp" prefWidth="105.0" text="AFFICHER" />
+    <Button id="supprimer" fx:id="supprimeremp" layoutX="411.0" layoutY="368.0" mnemonicParsing="false" onAction="#supprimeremp" text="SUPPRIMER" />
+    <Label layoutX="63.0" layoutY="59.0" prefWidth="496.0" text="AFFICHAGE DES EMPLOIS DU TEMPS" textFill="WHITE">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <Button id="modifieremp" fx:id="modifiere" layoutX="104.0" layoutY="368.0" mnemonicParsing="false" onAction="#modifiere" text="MODIFIER" />
+    <Button fx:id="BACK5" layoutX="499.0" layoutY="21.0" mnemonicParsing="false" onAction="#BACK5" text="RETOUR" />
+    <TextField fx:id="filterField" layoutX="157.0" layoutY="333.0" prefWidth="200.0" />
+    <Label layoutX="28.0" layoutY="333.0" text="CHERCHER :" textFill="WHITE">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>
