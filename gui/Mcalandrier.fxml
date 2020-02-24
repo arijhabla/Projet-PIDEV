@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.gui.McalandrierController">
+  <children>
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+      <image>
+        <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Button fx:id="ajoutc" layoutX="187.0" layoutY="95.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="52.999900000002526" prefWidth="223.0" style="  -fx-background-color: &#10;        linear-gradient(#ffd65b, #e68400),&#10;        linear-gradient(#ffef84, #f2ba44),&#10;        linear-gradient(#ffea6a, #efaa22),&#10;        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),&#10;        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0,1,2,3,0;&#10;    -fx-text-fill: #654b00;&#10;    -fx-font-weight: bold;&#10;    -fx-font-size: 14px;&#10;    -fx-padding: 10 20 10 20;" text="ajouter calandrier_examen" />
+    <Button fx:id="affc" layoutX="187.0" layoutY="201.0" mnemonicParsing="false" onAction="#afficher" prefHeight="53.0" prefWidth="223.00009999999747" style="  -fx-background-color: &#10;        linear-gradient(#ffd65b, #e68400),&#10;        linear-gradient(#ffef84, #f2ba44),&#10;        linear-gradient(#ffea6a, #efaa22),&#10;        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),&#10;        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0,1,2,3,0;&#10;    -fx-text-fill: #654b00;&#10;    -fx-font-weight: bold;&#10;    -fx-font-size: 14px;&#10;    -fx-padding: 10 20 10 20;" text="afficher calandrier_examen" />
+    <Button fx:id="exit" layoutX="447.0" layoutY="274.0" mnemonicParsing="false" onAction="#exit" prefHeight="43.0" prefWidth="107.0" style="-fx-background-color: linear-gradient(#ff5400, #be1d00);&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0;&#10;    -fx-text-fill: white;" text="exit" />
+  </children>
+</AnchorPane>

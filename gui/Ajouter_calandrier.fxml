@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="417.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.gui.Ajouter_calandrierController">
+  <children>
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" layoutX="0.0" layoutY="1.0" pickOnBounds="true">
+      <image>
+        <Image preserveRatio="true" smooth="true" url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+      </image>
+    </ImageView>
+    <Label layoutX="99.0" layoutY="71.0" text="id_examen" textFill="WHITE" />
+    <Label layoutX="99.0" layoutY="123.0" text="id_matiere" textFill="WHITE" />
+    <Label layoutX="99.0" layoutY="170.0" text="id_salle" textFill="WHITE" />
+    <Label layoutX="99.0" layoutY="230.0" text="id_classe" textFill="WHITE" />
+    <Label layoutX="99.0" layoutY="280.0" text="nom_matiere" textFill="WHITE" />
+    <TextField id="id_salle" fx:id="fid_salle" layoutX="243.0" layoutY="160.0" prefWidth="200.0" />
+    <TextField id="id_classe" fx:id="fid_classe" layoutX="243.0" layoutY="227.0" prefWidth="200.0" />
+    <Button fx:id="ajouter" layoutX="396.0" layoutY="364.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="35.0" prefWidth="95.0" style="   -fx-background-color:&#10;        linear-gradient(#f0ff35, #a9ff00),&#10;        radial-gradient(center 50% -40%, radius 200%, #b8ee36 45%, #80c800 50%);&#10;    -fx-background-radius: 6, 5;&#10;    -fx-background-insets: 0, 1;&#10;    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );&#10;    -fx-text-fill: #395306;" text="ajouter" />
+    <Label layoutX="99.0" layoutY="320.0" text="date_examen" textFill="WHITE" />
+    <Button fx:id="annuler" layoutX="515.0" layoutY="364.0" mnemonicParsing="false" onAction="#annuler" prefHeight="35.0" prefWidth="88.0" style=" -fx-background-color: linear-gradient(#ff5400, #be1d00);&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0;&#10;    -fx-text-fill: white;" text="annuler" />
+    <Label layoutX="254.0" layoutY="27.0" text="Ajouter calandrier" textFill="WHITE" />
+      <DatePicker fx:id="fdate" layoutX="234.0" layoutY="315.0" />
+      <ComboBox fx:id="fnom" layoutX="238.0" layoutY="275.0" prefHeight="31.0" prefWidth="208.0" />
+      <ComboBox fx:id="fid_examen" layoutX="241.0" layoutY="66.0" prefHeight="31.0" prefWidth="200.0" />
+      <ComboBox fx:id="fid_matiere" layoutX="243.0" layoutY="118.0" prefHeight="31.0" prefWidth="200.0" />
+  </children>
+</AnchorPane>
