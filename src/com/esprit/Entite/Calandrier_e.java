@@ -6,6 +6,9 @@
 
 package com.esprit.Entite;
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 /**
  *
  * @author BEN SAID
@@ -17,8 +20,9 @@ public class Calandrier_e {
     int id_salle;
     int id_classe;
     String nom;
-
-    public int getId_calandrier() {
+    Timestamp date_ex;
+    
+  public int getId_calandrier() {
         return id_calandrier;
     }
 
@@ -66,22 +70,43 @@ public class Calandrier_e {
         this.nom = nom;
     }
 
-    public Calandrier_e(int id_calandrier, int id_examen, int id_matiere, int id_salle, int id_classe, String nom) {
+    public Timestamp getDate_ex() {
+        return date_ex;
+    }
+
+    public void setDate_ex(Timestamp date_ex) {
+        this.date_ex = date_ex;
+    }
+
+   
+
+    public Calandrier_e(int id_examen, int id_matiere, int id_salle, int id_classe, String nom, Timestamp date_ex) {
+        this.id_examen = id_examen;
+        this.id_matiere = id_matiere;
+        this.id_salle = id_salle;
+        this.id_classe = id_classe;
+        this.nom = nom;
+        this.date_ex = date_ex;
+    }
+    
+    
+
+    public Calandrier_e(int id_calandrier, int id_examen, int id_matiere, int id_salle, int id_classe, String nom, Timestamp date_ex) {
         this.id_calandrier = id_calandrier;
         this.id_examen = id_examen;
         this.id_matiere = id_matiere;
         this.id_salle = id_salle;
         this.id_classe = id_classe;
         this.nom = nom;
+        this.date_ex = date_ex;
     }
 
     @Override
     public String toString() {
-        return "Calandrier_e{" + "id_calandrier=" + id_calandrier + ", id_examen=" + id_examen + ", id_matiere=" + id_matiere + ", id_salle=" + id_salle + ", id_classe=" + id_classe + ", nom=" + nom + '}';
+        return "Calandrier_e{" + "id_calandrier=" + id_calandrier + ", id_examen=" + id_examen + ", id_matiere=" + id_matiere + ", id_salle=" + id_salle + ", id_classe=" + id_classe + ", nom=" + nom + ", date_ex=" + date_ex + '}';
     }
 
     public Calandrier_e() {
     }
-    
     
 }

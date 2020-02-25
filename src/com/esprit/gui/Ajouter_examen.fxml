@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.gui.Ajouter_examenController">
+  <children>
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" pickOnBounds="true">
+      <image>
+        <Image preserveRatio="true" smooth="true" url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+      </image>
+    </ImageView>
+    <Label layoutX="109.0" layoutY="93.0" text="id_matiere" textFill="WHITE" />
+    <Label layoutX="109.0" layoutY="152.0" text="date_examen" textFill="WHITE" />
+    <Label layoutX="109.0" layoutY="233.0" text="coefficient" textFill="WHITE" />
+    <TextField fx:id="tfid_matiere" layoutX="270.0" layoutY="90.0" prefHeight="31.0" prefWidth="218.0" />
+    <Button fx:id="bvalider" layoutX="357.0" layoutY="341.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="38.0" prefWidth="88.0" style=" -fx-background-color:&#10;        linear-gradient(#f0ff35, #a9ff00),&#10;        radial-gradient(center 50% -40%, radius 200%, #b8ee36 45%, #80c800 50%);&#10;    -fx-background-radius: 6, 5;&#10;    -fx-background-insets: 0, 1;&#10;    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );&#10;    -fx-text-fill: #395306;" text="valider" />
+    <Button fx:id="annuler" layoutX="489.0" layoutY="341.0" mnemonicParsing="false" onAction="#annuler" prefHeight="38.0" prefWidth="88.0" style=" -fx-background-color: linear-gradient(#ff5400, #be1d00);&#10;    -fx-background-radius: 30;&#10;    -fx-background-insets: 0;&#10;    -fx-text-fill: white;" text="annuler" />
+    <Label layoutX="270.0" layoutY="46.0" text="Ajouter examen" textFill="WHITE" />
+      <DatePicker fx:id="tfdate_examen" layoutX="270.0" layoutY="147.0" />
+      <TextField fx:id="tf_coefficient" layoutX="270.0" layoutY="228.0" prefHeight="31.0" prefWidth="218.0" />
+  </children>
+</AnchorPane>

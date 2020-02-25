@@ -19,6 +19,12 @@ import java.util.logging.Logger;
  * @author BEN SAID
  */
 public class ServiceExamen implements IServiceExamen<Examen> {
+    
+    private static ServiceExamen instance;
+    public static ServiceExamen getInstance() {
+   if(instance==null) 
+            instance=new ServiceExamen();
+        return instance;    }
 
     private Connection con;
     private Statement ste;
@@ -40,7 +46,7 @@ public class ServiceExamen implements IServiceExamen<Examen> {
        PreparedStatement pre=con.prepareStatement("INSERT INTO `esprit`.`examen` (`id_examen`,`id_matiere`,`date_examen`,`coefficient`) VALUES ( ?, ?, ?,?);");
    pre.setInt(1, e.getId_examen());
        pre.setInt(2,e.getId_matiere());
-    pre.setDate(3, e.getDate_examen());
+    pre.setTimestamp(3, e.getDate_examen());
     pre.setFloat(4, e.getCoefficient());
       
    
@@ -80,7 +86,7 @@ public class ServiceExamen implements IServiceExamen<Examen> {
      while (rs.next()) {                
                int id_examen=rs.getInt(1);
                int id_matiere=rs.getInt("id_matiere");     
-                Date date_examen=rs.getDate("date_examen");
+                Timestamp date_examen=rs.getTimestamp("date_examen");
                float coefficient=rs.getFloat("coefficient");
               
              

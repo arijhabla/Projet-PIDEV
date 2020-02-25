@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.esprit.gui.Afficher_note_eleveController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="id_e" layoutX="377.0" layoutY="38.0" />
+      <TableView layoutX="61.0" layoutY="105.0" prefHeight="261.0" prefWidth="309.0">
+        <columns>
+          <TableColumn fx:id="matieres" prefWidth="156.0" text="Matiéres" />
+          <TableColumn fx:id="notes" minWidth="0.0" prefWidth="152.0" text="Notes" />
+        </columns>
+      </TableView>
+      <Label layoutX="251.0" layoutY="36.0" text="Votre ID :" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

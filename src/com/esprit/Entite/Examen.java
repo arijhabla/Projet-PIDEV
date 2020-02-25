@@ -7,6 +7,7 @@
 package com.esprit.Entite;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
 /**
  *
@@ -15,16 +16,29 @@ import java.sql.Date;
 public class Examen {
     int id_examen;
     int id_matiere;
-    Date date_examen;
+   Timestamp date_examen;
     float coefficient;
 
-    public Date getDate_examen() {
+    public Examen(int id_matiere, Timestamp date_examen, float coefficient) {
+         this.id_matiere = id_matiere;
+        this.date_examen = date_examen;
+        this.coefficient = coefficient;
+    }
+
+    /* public Date getDate_examen() {
+    return date_examen;
+    }*/
+    /*public void setDate_examen(Date date_examen) {
+    this.date_examen = date_examen;
+    }*/
+    public Timestamp getDate_examen() {
         return date_examen;
     }
 
-    public void setDate_examen(Date date_examen) {
+    public void setDate_examen(Timestamp date_examen) {
         this.date_examen = date_examen;
     }
+   
 
     
     public int getId_examen() {
@@ -51,7 +65,7 @@ public class Examen {
         this.coefficient = coefficient;
     }
 
-    public Examen(int id_examen, int id_matiere, Date date_examen, float coefficient) {
+    public Examen(int id_examen, int id_matiere, Timestamp date_examen, float coefficient) {
         this.id_examen = id_examen;
         this.id_matiere = id_matiere;
         this.date_examen = date_examen;
@@ -61,6 +75,9 @@ public class Examen {
     @Override
     public String toString() {
         return "Examen{" + "id_examen=" + id_examen + ", id_matiere=" + id_matiere + ", date_examen=" + date_examen + ", coefficient=" + coefficient + '}';
+    }
+
+    public Examen() {
     }
 
    

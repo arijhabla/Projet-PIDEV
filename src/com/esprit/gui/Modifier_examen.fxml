@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.gui.Modifier_examenController">
+  <children>
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" layoutX="0.0" layoutY="-1.0" pickOnBounds="true">
+      <image>
+        <Image preserveRatio="true" smooth="true" url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+      </image>
+    </ImageView>
+    <Label layoutX="100.0" layoutY="132.0" text="id_matiere" textFill="WHITE" />
+    <Label layoutX="100.0" layoutY="187.0" text="date_examen" textFill="WHITE" />
+    <Label layoutX="100.0" layoutY="256.0" text="coefficient" textFill="WHITE" />
+    <TextField fx:id="idmm" layoutX="223.0" layoutY="122.0" prefWidth="200.0" />
+    <TextField fx:id="coeffm" layoutX="223.0" layoutY="250.0" prefWidth="200.0" />
+    <Button fx:id="modifier" layoutX="362.0" layoutY="316.0" mnemonicParsing="false" onAction="#modifier" prefHeight="42.0" prefWidth="99.0" style=" -fx-background-color:&#10;        linear-gradient(#f0ff35, #a9ff00),&#10;        radial-gradient(center 50% -40%, radius 200%, #b8ee36 45%, #80c800 50%);&#10;    -fx-background-radius: 6, 5;&#10;    -fx-background-insets: 0, 1;&#10;    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );&#10;    -fx-text-fill: #395306;" text="modifier" />
+    <Button fx:id="annulere" layoutX="489.0" layoutY="317.0" mnemonicParsing="false" onAction="#annulere" prefWidth="88.0" style=" -fx-padding: 8 15 15 15;&#10;    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;&#10;    -fx-background-radius: 8;&#10;    -fx-background-color: &#10;        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),&#10;        #9d4024,&#10;        #d86e3a,&#10;        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);&#10;    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );&#10;    -fx-font-weight: bold;&#10;    -fx-font-size: 14" text="annuler" />
+    <TextField fx:id="idexm" layoutX="223.0" layoutY="62.0" prefWidth="200.0" />
+    <Label layoutX="109.0" layoutY="65.0" text="id_examen" textFill="WHITE" />
+      <DatePicker fx:id="dateexm" layoutX="223.0" layoutY="192.0" />
+      <Button fx:id="refreche" layoutX="244.0" layoutY="312.0" mnemonicParsing="false" onAction="#refreche" prefHeight="42.0" prefWidth="88.0" text="refrech" />
+  </children>
+</AnchorPane>

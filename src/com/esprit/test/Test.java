@@ -5,15 +5,13 @@
  */
 
 package com.esprit.test;
-import com.esprit.Entite.Comptable;
-import com.esprit.Entite.Conge;
-import com.esprit.Entite.Paiement;
-import com.esprit.Entite.Prime;
-import com.esprit.Service.ServiceComptable;
-import com.esprit.Service.ServiceConge;
-import com.esprit.Service.ServicePaiement;
-import com.esprit.Service.ServicePrime;
 
+import com.esprit.Entite.Examen;
+import com.esprit.Service.ServiceExamen;
+import com.esprit.Entite.Note;
+import com.esprit.Service.ServiceNote;
+import com.esprit.Entite.Calandrier_e;
+import com.esprit.Service.ServiceCalandrier_e;
 import com.esprit.Utils.DataBase;
 import java.sql.*;
 import java.util.List;
@@ -21,64 +19,49 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
- * @author Pc
+ @author ferie
  */
 public class Test {
-    private static Prime Prime;
-       public static void main(String[] args) {
-        ServicePrime p=new ServicePrime();
-        ServicePaiement pa=new ServicePaiement();
-        ServiceComptable c=new ServiceComptable();
-        ServiceConge myco=new ServiceConge();
-      
-        Prime p1 = new Prime(5000,"primaire");
-        Prime p2=new Prime(700,"primaire1");
-        Prime p3=new Prime(6000,"primaire2");
-        Prime p4=new Prime(6000,"secondaire2");
-        Prime p5=new Prime(55,"primaire");
-        Date d1=new Date(2020,06,12);
-        Date d2=new Date(2020,07,15);
-        Conge con1 = new Conge(222,d1,d2);
-        Paiement pa1 = new Paiement(25,4,"eeee",d1);
-        Paiement pa2=new Paiement(144444,444,"hannouna",d1);
-        Comptable c1=new Comptable(074,"Chakroun","Omar","Congés",d1,25684957,"ChakrounOmar@hotmail.com");
-        Comptable c2=new Comptable(80,"Chakroun","Omar","Congés",d1,25684957,"ChakrounOmar@hotmail.com");
+    
+    public static void main(String[] args) { 
+        ServiceExamen se=new ServiceExamen();
+         ServiceNote no=new ServiceNote();
+         ServiceCalandrier_e ca=new ServiceCalandrier_e();
+            Date d3=new Date(2001,17,20);
+            Date d2=new Date(2022,05,18);
+            Date d1=new Date(2020,06,12);
+     //Examen e1=new Examen(1,5,d3,55);
+     // Examen e2=new Examen(45,57,d3,54);
+      //Note n1=new Note(1,5,7788,70,18);
+      //Note n2=new Note(2,225,31,525,65);     
+      //Note n3=new Note(3,25,30,25,55);
+     // Calandrier_e c1=new Calandrier_e(1,5,7788,4,6,"math","11-22-2020");
+     // Calandrier_e c2=new Calandrier_e(1,15,3,65,44,"fr","33-66-8888"); 
+   
+   
       
         try {
-           //         
-           //Prime pr=p.recherchePrimeParGrade("primaire");
-           //System.out.println(pr);
-            //c.delete(c1);
-            //c.ajouter(c2);
-           // pa.update(pa1); 
-           //System.out.println(pa1);
-           //p.update(p2);
-           // p.delete(p1);
-           // p.delete(p2);
-           // p.delete(p3);
-           //p.delete(p4);
-           //ser.ajouter1(e2);
-           myco.ajouter(con1);
-          //p.ajouter(p2); 
-         // p.ajouter(p3); 
-        // p.ajouter(p4); 
-        
-            //p.delete(p1);
-  // p.delete(p2);
- // p.delete(p3);
- //p.delete(p4);
-// p.ajouter1(p1);/
-    
-          //  List<Prime>lt=p.readAll();
-           //List<Paiement>lst=pa.readAll();
-          //List<Prime>lst=p.Triparsalaire();
-          //System.out.println(lst);
-           System.out.println(con1);
+         // se.update(e1);
+          // sn.update(n1);
+         //  no.ajouter1(n1);
+           //no.ajouter(n3);
+          //  ca.ajouter(c1);
+            //ca.delete(c2);
+//no.update(n2);
+          //ca.update(c2);
+ //Calandrier_e ce=ca.rechercheCalandrier_eParid_classe(44);
+  //System.out.println(ce);
+List<Calandrier_e> lst=ca.Triparnom();
+System.out.println(lst);
+
+       //se.ajouter1(e1);
+           
+            //se.ajouter(e1);
           
-          
-        }
-        catch (SQLException ex) 
-        {
+         //   List<Examen>lt=se.readAll();
+           
+            //System.out.println(lt);
+        } catch (SQLException ex) {
             System.out.println(ex);
         }
     }

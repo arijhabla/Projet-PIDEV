@@ -20,6 +20,13 @@ import java.util.logging.Logger;
  * @author BEN SAID
  */
 public class ServiceCalandrier_e implements IServiceCalandrier_e<Calandrier_e> {
+      private static ServiceCalandrier_e instance;
+    public static ServiceCalandrier_e getInstance() {
+   if(instance==null) 
+            instance=new ServiceCalandrier_e();
+        return instance;    }
+
+  
 
     private Connection con;
     private Statement ste;
@@ -29,23 +36,23 @@ public class ServiceCalandrier_e implements IServiceCalandrier_e<Calandrier_e> {
 
     }
 
-    @Override
+@Override
     public void ajouter(Calandrier_e t) throws SQLException {
         ste = con.createStatement();
-        String requeteInsert = "INSERT INTO `esprit`.`Calandrier_e` (`id_calandrier`,`id_examen`,`id_matiere`,`id_salle`,`id_classe`,`nom`) VALUES (NULL, '" + t.getId_examen() + "', '" + t.getId_matiere() + "', '" + t.getId_salle()+ "','" + t.getId_classe() + "','" + t.getNom() + "');";
+        String requeteInsert = "INSERT INTO `esprit`.`Calandrier_e` (`id_calandrier`,`id_examen`,`id_matiere`,`id_salle`,`id_classe`,`nom`,`date_ex`) VALUES (NULL, '" + t.getId_examen() + "', '" + t.getId_matiere() + "', '" + t.getId_salle()+ "','" + t.getId_classe() + "','" + t.getNom() + "' ,'" + t.getDate_ex() + "');";
         ste.executeUpdate(requeteInsert);
     }
     public void ajouter1(Calandrier_e c) throws SQLException
     {
    
-       PreparedStatement pre=con.prepareStatement("INSERT INTO `esprit`.`calandrier_e` (`id_calandrier`,`id_examen`,`id_matiere`,`id_salle`,`id_classe`,`nom`) VALUES ( ?, ?, ?,?,? ,?);");
+       PreparedStatement pre=con.prepareStatement("INSERT INTO `esprit`.`calandrier_e` (`id_calandrier`,`id_examen`,`id_matiere`,`id_salle`,`id_classe`,`nom`,`date_ex`) VALUES ( ?, ?, ?,?,? ,?,?);");
    pre.setInt(1, c.getId_calandrier());
        pre.setInt(2,c.getId_examen());
        pre.setInt(2,c.getId_matiere());
         pre.setInt(2,c.getId_salle());
          pre.setInt(2,c.getId_classe());
     pre.setString(3, c.getNom());
-   
+   pre.setTimestamp(4, c.getDate_ex());
       
    
     pre.executeUpdate();
@@ -67,7 +74,7 @@ public class ServiceCalandrier_e implements IServiceCalandrier_e<Calandrier_e> {
 
     }
     public void update(Calandrier_e t) throws SQLException {
-          String sql ="UPDATE `esprit`.`Calandrier_e` SET `id_calandrier`='"+t.getId_calandrier() + "',`id_examen`='"+t.getId_examen() + "' ,`id_matiere`='"+t.getId_matiere() + "',`id_salle`='"+t.getId_salle() + "',`id_classe`='"+t.getId_classe() + "',`nom`='"+t.getNom() + "' WHERE `id_calandrier`='"+t.getId_calandrier()+"' ";
+          String sql ="UPDATE `esprit`.`Calandrier_e` SET `id_calandrier`='"+t.getId_calandrier() + "',`id_examen`='"+t.getId_examen() + "' ,`id_matiere`='"+t.getId_matiere() + "',`id_salle`='"+t.getId_salle() + "',`id_classe`='"+t.getId_classe() + "',`nom`='"+t.getNom() + "',`date_ex`='"+t.getDate_ex() + "' WHERE `id_calandrier`='"+t.getId_calandrier()+"' ";
   
     try {
             Statement stl = con.createStatement();
@@ -88,9 +95,9 @@ public class ServiceCalandrier_e implements IServiceCalandrier_e<Calandrier_e> {
               int id_salle=rs.getInt("id_salle");
                int id_classe=rs.getInt("id_classe");
                String nom=rs.getString("nom");
-              
+                Timestamp date_ex=rs.getTimestamp("date_ex");
              
-               Calandrier_e c=new Calandrier_e(id_calandrier,id_examen,id_matiere,id_salle,id_classe,nom);
+               Calandrier_e c=new Calandrier_e(id_calandrier,id_examen,id_matiere,id_salle,id_classe,nom,date_ex);
      arr.add(c);
      }
     return arr;
@@ -115,6 +122,7 @@ public class ServiceCalandrier_e implements IServiceCalandrier_e<Calandrier_e> {
                     S.setId_salle(rs.getInt("id_salle"));
                  S.setId_classe(rs.getInt("id_classe"));
                   S.setNom(rs.getString("nom"));
+                  S.setDate_ex(rs.getTimestamp("date_ex"));
                   System.out.println("ok");
              
    
@@ -145,10 +153,10 @@ public class ServiceCalandrier_e implements IServiceCalandrier_e<Calandrier_e> {
                 int id_salle=rs.getInt("id_salle");
                int id_classe=rs.getInt(4);
                String nom=rs.getString("nom");
-               
+               Timestamp date_ex=rs.getTimestamp("date_ex");
   
      
-            lst.add(new Calandrier_e(id_calandrier,id_examen,id_matiere,id_salle,id_classe,nom));
+            lst.add(new Calandrier_e(id_calandrier,id_examen,id_matiere,id_salle,id_classe,nom,date_ex));
           }
                 return lst;
         
@@ -157,5 +165,6 @@ public class ServiceCalandrier_e implements IServiceCalandrier_e<Calandrier_e> {
         } 
     return null;
         }
+ 
  
 }

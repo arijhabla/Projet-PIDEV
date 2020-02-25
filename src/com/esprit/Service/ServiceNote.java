@@ -8,19 +8,33 @@ package com.esprit.Service;
 import com.esprit.Entite.Calandrier_e;
 import com.esprit.Entite.Note;
 import com.esprit.IService.IServiceNote;
-import java.sql.SQLException;
-import java.util.List;
-import java.sql.*;
 import com.esprit.Utils.DataBase;
+import com.esprit.gui.Afficher_noteController;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.sql.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.control.TableView;
+import javax.swing.table.TableModel;
+import static org.shaded.apache.poi.hssf.usermodel.HeaderFooter.tab;
 
 /**
  *
  * @author BEN SAID
  */
 public class ServiceNote implements IServiceNote<Note> {
+
+    private static ServiceNote instance;
+    public static ServiceNote getInstance() {
+   if(instance==null) 
+            instance=new ServiceNote();
+        return instance;    }
 
     private Connection con;
     private Statement ste;
@@ -33,26 +47,30 @@ public class ServiceNote implements IServiceNote<Note> {
    
     public void ajouter(Note t) throws SQLException {
         ste = con.createStatement();
-        String requeteInsert = "INSERT INTO `esprit`.`note` (`id_eleve`,`id_examen`,`id_matiere`,`note`) VALUES ('" + t.getId_eleve() + "', '" + t.getId_examen()+ "','" + t.getId_matiere() + "','" + t.getNote() + "');";
+        String requeteInsert = "INSERT INTO `esprit`.`note` (`id_eleve`,`id_examen`,`id_matiere`,`note`,`id_note`,`nom_matiere`,`mail`,`mdp`,`date`) VALUES ('" + t.getId_eleve() + "', '" + t.getId_examen()+ "','" + t.getId_matiere() + "','" + t.getNote() + "' , '" + t.getId_note()+ "', '" + t.getMail()+ "', '" + t.getMdp()+ "', '" + t.getNom_matiere()+ "', '" + t.getNote()+ "');";
         ste.executeUpdate(requeteInsert);
     }
     public void ajouter1(Note n) throws SQLException
     {
    
-       PreparedStatement pre=con.prepareStatement("INSERT INTO `esprit`.`note` (`id_eleve`,`id_examen`,`id_matiere`,`note`) VALUES ( ?, ?, ?,?);");
+       PreparedStatement pre=con.prepareStatement("INSERT INTO `esprit`.`note` (`id_eleve`,`id_examen`,`id_matiere`,`note`,`id_note`,`nom_matiere`,`mail`,`mdp`,`date`) VALUES ( ?, ?, ?,?,?,?,?,?,?);");
    pre.setInt(1, n.getId_eleve());
        pre.setInt(2,n.getId_examen());
     pre.setInt(3, n.getId_matiere());
     pre.setFloat(4, n.getNote());
-      
-   
+    pre.setInt(5, n.getId_note());  
+     pre.setString(6, n.getNom_matiere());   
+    pre.setString(7, n.getMail()); 
+   pre.setString(8, n.getMdp()); 
+   pre.setTimestamp (9, n.getDate()); 
+    
     pre.executeUpdate();
     }
             
 
 
     public void delete(Note t) throws SQLException {
-        String sql = "DELETE FROM `esprit`.`note` where (id_eleve ="+t.getId_eleve()+");";
+        String sql = "DELETE FROM `esprit`.`note` where (id_note ="+t.getId_note()+");";
    //String sql = "INSERT INTO fos_user(username) VALUES ('"+c.getUsername()+"');";
   
     try {
@@ -65,7 +83,7 @@ public class ServiceNote implements IServiceNote<Note> {
 
     }
     public void update(Note t) throws SQLException {
-          String sql ="UPDATE `esprit`.`note` SET `id_eleve`='"+t.getId_eleve() + "',`id_examen`='"+t.getId_examen() + "' ,`id_matiere`='"+t.getId_matiere() + "',`note`='"+t.getNote() + "'WHERE `id_eleve`='"+t.getId_eleve()+"' ";
+          String sql ="UPDATE `esprit`.`note` SET `id_eleve`='"+t.getId_eleve() + "',`id_examen`='"+t.getId_examen() + "' ,`id_matiere`='"+t.getId_matiere() + "',`note`='"+t.getNote() + "' ,`id_note`='"+t.getId_note() + "' ,`nom_matiere`='"+t.getNom_matiere()+ "' ,`mail`='"+t.getMail()+ "' ,`mdp`='"+t.getMdp()+ "' ,`date`='"+t.getNote()+ "'WHERE `id_note`='"+t.getId_note()+"' ";
   
     try {
             Statement stl = con.createStatement();
@@ -84,9 +102,13 @@ public class ServiceNote implements IServiceNote<Note> {
                int id_examen=rs.getInt("id_examen");     
                 int id_matiere=rs.getInt("id_matiere");
                float note=rs.getFloat("note");
-              
+              int id_note=rs.getInt("id_note");
+              String nom_matiere=rs.getString("nom_matiere");
+              String mail=rs.getString("mail");
+              String mdp=rs.getString("mdp");
+             Timestamp date=rs.getTimestamp("date");
              
-               Note e=new Note(id_eleve,id_examen,id_matiere,note);
+               Note e=new Note(id_eleve,id_examen,id_matiere,note,id_note,nom_matiere, mail, mdp, date);
      arr.add(e);
      }
     return arr;
@@ -109,8 +131,12 @@ public class ServiceNote implements IServiceNote<Note> {
              S.setId_eleve(rs.getInt("id_eleve"));
                     S.setId_examen(rs.getInt("id_examen"));
                     S.setId_matiere(rs.getInt("id_matiere"));
-                    S.setNote(rs.getInt("note"));
-                 
+                    S.setNote(rs.getFloat("note"));
+                 S.setId_note(rs.getInt("id_note"));
+                  S.setNom_matiere(rs.getString("nom_matiere"));
+                   S.setMail(rs.getString("mail"));
+                    S.setMdp(rs.getString("mdp"));
+                     S.setDate(rs.getTimestamp("date"));
                  
                   System.out.println("ok");
              
@@ -124,4 +150,5 @@ public class ServiceNote implements IServiceNote<Note> {
         } 
     return null;
  }
-}
+  //To change body of generated methods, choose Tools | Templates.
+    }
