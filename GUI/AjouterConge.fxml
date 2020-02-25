@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minWidth="626.0" prefHeight="416.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AjouterCongeController">
+  <children>
+    <ImageView id="60637604_326473804657705_1780967833497239552_n.jpg">
+      <image>
+        <Image preserveRatio="true" smooth="true" url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+      </image>
+    </ImageView>
+    <ImageView id="84098548_815652132237256_748359954968084480_n.png" fitHeight="48.999900817871094" fitWidth="111.0" layoutX="9.0" layoutY="361.0">
+      <image>
+        <Image preserveRatio="true" smooth="true" url="@../../../image/84098548_815652132237256_748359954968084480_n.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="213.0" layoutY="40.0" prefHeight="63.0" prefWidth="297.0" text="Ajouter congé" textFill="#ff007a">
+      <font>
+        <Font size="32.0" />
+      </font>
+    </Label>
+    <Label layoutX="121.0" layoutY="147.0" prefHeight="18.0" prefWidth="99.0" text="id enseignant" textFill="WHITE" />
+    <Label layoutX="120.0" layoutY="251.0" prefHeight="18.0" prefWidth="99.0" text="Date fin" textFill="WHITE" />
+    <Label layoutX="119.0" layoutY="202.0" prefHeight="18.0" prefWidth="99.0" text="Date début" textFill="WHITE" />
+    <Button fx:id="ajouter" layoutX="391.0" layoutY="297.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+    <TextField fx:id="idc" layoutX="262.0" layoutY="144.0" prefWidth="200.0" />
+      <DatePicker fx:id="date1" layoutX="263.0" layoutY="199.0" />
+      <DatePicker fx:id="date2" layoutX="263.0" layoutY="248.0" />
+  </children>
+</AnchorPane>

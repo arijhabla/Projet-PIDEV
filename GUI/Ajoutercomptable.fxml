@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AjoutercomptableController">
+  <children>
+    <ImageView fitHeight="398.7220335542486" fitWidth="600.0" layoutX="0.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+      </image>
+    </ImageView>
+    <Label layoutX="239.0" layoutY="36.0" prefHeight="53.0" prefWidth="208.0" text="COMPTABLE" textFill="#cc0062">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <Label layoutX="104.0" layoutY="116.0" prefHeight="24.0" prefWidth="127.0" text="Nom comptable" textFill="WHITE" />
+    <Label layoutX="104.0" layoutY="151.0" prefHeight="24.0" prefWidth="127.0" text="Prenom comptable" textFill="WHITE" />
+    <Label layoutX="104.0" layoutY="181.0" prefHeight="24.0" prefWidth="127.0" text="Etat comptable" textFill="WHITE" />
+    <Label layoutX="104.0" layoutY="213.0" prefHeight="24.0" prefWidth="127.0" text="Telephone comptable" textFill="WHITE" />
+    <Label layoutX="104.0" layoutY="243.0" prefHeight="24.0" prefWidth="141.0" text="Adresse mail  comptable" textFill="WHITE" />
+    <TextField fx:id="nomc" layoutX="247.0" layoutY="118.0" prefWidth="200.0" />
+    <TextField fx:id="prenomc" layoutX="248.0" layoutY="152.0" prefWidth="200.0" />
+    <TextField fx:id="telc" layoutX="248.0" layoutY="212.0" prefWidth="200.0" />
+    <TextField fx:id="adressec" layoutX="248.0" layoutY="244.0" prefWidth="200.0" />
+    <Button fx:id="ajouter" layoutX="390.0" layoutY="290.0" mnemonicParsing="false" onAction="#ajouter" text="Valider" />
+    <ImageView fitHeight="43.0" fitWidth="110.35759619510536" layoutX="14.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/84098548_815652132237256_748359954968084480_n.png" />
+      </image>
+    </ImageView>
+      <ComboBox fx:id="etatc" layoutX="248.0" layoutY="181.0" prefWidth="150.0" />
+  </children>
+</AnchorPane>

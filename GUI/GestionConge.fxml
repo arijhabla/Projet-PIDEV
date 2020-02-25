@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.GUI.GestionCongeController">
+  <children>
+    <ImageView id="60637604_326473804657705_1780967833497239552_n" layoutX="0.0" layoutY="0.0" pickOnBounds="true">
+      <image>
+        <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <ImageView id="84098548_815652132237256_748359954968084480_n" fitHeight="40.0" fitWidth="71.0" layoutX="13.0" layoutY="365.0" pickOnBounds="true">
+      <image>
+        <Image url="@../../../image/84098548_815652132237256_748359954968084480_n.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <Button fx:id="ajouter" layoutX="195.0" layoutY="111.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="80.0" prefWidth="228.0" style="-fx-background-color: &#10;        #ecebe9,&#10;        rgba(0,0,0,0.05),&#10;        linear-gradient(#dcca8a, #c7a740),&#10;        linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e6c75d 80%, #e2c045 100%),&#10;        linear-gradient(#f6ebbe, #e6c34d);&#10;    -fx-background-insets: 0,9 9 8 9,9,10,11;&#10;    -fx-background-radius: 50;&#10;    -fx-padding: 15 30 15 30;&#10;    -fx-font-family: &quot;Helvetica&quot;;&#10;    -fx-font-size: 18px;&#10;    -fx-text-fill: #311c09;&#10;    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);&#10;" text="Ajouter Congé" />
+    <Button fx:id="afficher" layoutX="195.0" layoutY="211.0" mnemonicParsing="false" onAction="#afficher" prefHeight="80.0" prefWidth="228.0" style="-fx-background-color: &#10;        #ecebe9,&#10;        rgba(0,0,0,0.05),&#10;        linear-gradient(#dcca8a, #c7a740),&#10;        linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e6c75d 80%, #e2c045 100%),&#10;        linear-gradient(#f6ebbe, #e6c34d);&#10;    -fx-background-insets: 0,9 9 8 9,9,10,11;&#10;    -fx-background-radius: 50;&#10;    -fx-padding: 15 30 15 30;&#10;    -fx-font-family: &quot;Helvetica&quot;;&#10;    -fx-font-size: 18px;&#10;    -fx-text-fill: #311c09;&#10;    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);&#10;" text="Liste des congés" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.esprit.GUI.ModifierComptableController">
+  <children>
+    <ImageView fitHeight="398.7220458984375" fitWidth="600.0" layoutX="0.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+      </image>
+    </ImageView>
+    <Label layoutX="246.0" layoutY="34.0" prefHeight="42.0" prefWidth="158.0" text="UPDATE" textFill="#ff007a">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Label>
+    <Label layoutX="75.0" layoutY="97.0" prefHeight="33.0" prefWidth="115.0" text="Nom comptable" textFill="WHITE" />
+    <Label layoutX="75.0" layoutY="144.0" prefHeight="33.0" prefWidth="115.0" text="Prénom comptable" textFill="WHITE" />
+    <Label layoutX="75.0" layoutY="185.0" prefHeight="33.0" prefWidth="115.0" text="état comptable" textFill="WHITE" />
+    <Label layoutX="75.0" layoutY="231.0" prefHeight="33.0" prefWidth="128.0" text="Téléphone comptable" textFill="WHITE" />
+    <Button fx:id="valider" layoutX="421.0" layoutY="344.0" mnemonicParsing="false" onAction="#valider" text="valider" />
+    <TextField fx:id="nomcom" layoutX="246.0" layoutY="103.0" prefWidth="200.0" />
+    <TextField fx:id="prenomcom" layoutX="246.0" layoutY="151.0" prefWidth="200.0" />
+    <TextField fx:id="etatcom" layoutX="246.0" layoutY="195.0" prefWidth="200.0" />
+    <TextField fx:id="telcom" layoutX="246.0" layoutY="239.0" prefWidth="200.0" />
+    <Label layoutX="75.0" layoutY="277.0" prefHeight="33.0" prefWidth="151.0" text="Adresse mail comptable" textFill="WHITE" />
+    <TextField fx:id="adressecom" layoutX="246.0" layoutY="282.0" prefWidth="200.0" />
+    <Button fx:id="refresh" layoutX="19.0" layoutY="24.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+    <ImageView fitHeight="57.0" fitWidth="146.2879771205734" layoutX="444.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../../image/84098548_815652132237256_748359954968084480_n.png" />
+      </image>
+    </ImageView>
+  </children>
+</AnchorPane>

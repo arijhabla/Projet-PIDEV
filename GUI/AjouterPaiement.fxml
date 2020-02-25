@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AjouterPaiementController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="117.0" layoutY="151.0" prefHeight="32.0" prefWidth="115.0" text="Type paiement" textFill="WHITE" />
+      <Label layoutX="117.0" layoutY="206.0" prefHeight="32.0" prefWidth="84.0" text="Montant" textFill="WHITE" />
+      <ComboBox fx:id="typep" layoutX="250.0" layoutY="155.0" prefWidth="150.0" />
+      <Button fx:id="ajouter" layoutX="348.0" layoutY="240.0" mnemonicParsing="false" onAction="#ajouter" text="valider" />
+      <Label layoutX="234.0" layoutY="44.0" prefHeight="54.0" prefWidth="182.0" text="PAIEMENT" textFill="#ff496e">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="montantp" layoutX="251.0" layoutY="206.0" />
+   </children>
+</AnchorPane>

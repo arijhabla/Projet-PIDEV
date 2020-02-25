@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.AfficherPaiementController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="table" layoutX="112.0" layoutY="85.0" prefHeight="219.0" prefWidth="414.0">
+        <columns>
+          <TableColumn fx:id="idp" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="typep" prefWidth="75.0" text="type" />
+            <TableColumn fx:id="montantp" prefWidth="75.0" text="montant" />
+        </columns>
+      </TableView>
+      <Button fx:id="supprimer" layoutX="456.0" layoutY="319.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
+      <Button fx:id="modifier" layoutX="379.0" layoutY="319.0" mnemonicParsing="false" onAction="#modifier" text="modifier" />
+      <Label layoutX="201.0" layoutY="23.0" prefHeight="52.0" prefWidth="249.0" text="Liste des paiements " textFill="#ff5ce4">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

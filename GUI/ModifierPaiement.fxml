@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.GUI.ModifierPaiementController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../../image/60637604_326473804657705_1780967833497239552_n.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="modifier" layoutX="401.0" layoutY="241.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="70.0" text="modifier " />
+      <TextField fx:id="typep" layoutX="322.0" layoutY="121.0" />
+      <TextField fx:id="montantp" layoutX="322.0" layoutY="188.0" />
+      <Label layoutX="137.0" layoutY="134.0" prefHeight="17.0" prefWidth="70.0" text="type" textFill="WHITE" />
+      <Label layoutX="137.0" layoutY="192.0" prefHeight="17.0" prefWidth="70.0" text="montant" textFill="WHITE" />
+      <Button fx:id="refresh" layoutX="27.0" layoutY="34.0" mnemonicParsing="false" onAction="#refresh" text="refresh" />
+   </children>
+</AnchorPane>
